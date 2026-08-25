@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurante en Baena | Grupo Gastrobrío — Picoteo, Traviola, Guisoteo y Gelateo</title>
+<meta name="description" content="Cuatro locales, un mismo grupo en Baena: Picoteo para tapear, Nova Traviola para pizza y burgers, Guisoteo para una cena especial y Gelateo para el helado de después.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Cuál es el mejor restaurante para comer en Baena?","acceptedAnswer":{"@type":"Answer","text":"Depende de qué te apetezca. En Baena, el Grupo Gastrobrío tiene cuatro propuestas bajo el mismo paraguas: Picoteo para tapear sin protocolos, Nova Traviola si te apetece pizza o hamburguesa, Guisoteo para una cena de nivel con brasas de carbón de coco y atún rojo, y Gelateo para el helado de después. Picoteo lleva abierto desde 2010 y mantiene una valoración alta y sostenida en Google."}},
+    {"@type":"Question","name":"¿Qué restaurante en Baena tiene opciones sin gluten?","acceptedAnswer":{"@type":"Answer","text":"Nova Traviola es el que más variedad tiene: pizzas, hamburguesas, bocadillos y perritos calientes en versión sin gluten. En Picoteo y Guisoteo, cada plato de la carta indica sus alérgenos numerados."}},
+    {"@type":"Question","name":"¿Dónde puedo cenar en Baena si voy con un grupo grande?","acceptedAnswer":{"@type":"Answer","text":"Guisoteo es la opción pensada para eso: tiene platos para compartir como el centro de chuletón a la brasa o la tabla de quesos de Zuheros. Si sois más de 8 personas, mejor llamar con antelación."}},
+    {"@type":"Question","name":"¿Hay algún restaurante en Baena que haga pedidos a domicilio?","acceptedAnswer":{"@type":"Answer","text":"Sí, Picoteo (957 94 54 65, lunes a sábado) y Nova Traviola (957 69 24 78, martes a domingo). El reparto es propio y cuesta 1€."}},
+    {"@type":"Question","name":"¿Qué restaurante en Baena recomiendas para una cena especial o de cumpleaños?","acceptedAnswer":{"@type":"Answer","text":"Guisoteo. Es la carta con el ticket medio más alto del grupo, con platos de autor como el tataki de atún rojo o el pulpo a la brasa con mayonesa de AOVE."}},
+    {"@type":"Question","name":"¿Dónde se puede tapear en Baena?","acceptedAnswer":{"@type":"Answer","text":"Picoteo es la opción clásica del grupo: raciones, tapas y una carta que cambia con la temporada. Abre de lunes a viernes de 08:30 a 00:00 y sábados de 13:00 a 00:00; domingos cierra."}},
+    {"@type":"Question","name":"¿Cuánto se paga de media en un restaurante en Baena?","acceptedAnswer":{"@type":"Answer","text":"En Picoteo los platos van sobre todo entre 6€ y 22€. En Traviola, las pizzas rondan entre 8,50€ y 10,50€. Guisoteo tiene el ticket más alto, con platos para compartir desde 28€."}},
+    {"@type":"Question","name":"¿Hay alguna heladería buena en Baena?","acceptedAnswer":{"@type":"Answer","text":"Gelateo, en la calle Salvador Muñoz 2, tiene 5,0 sobre 5 en Google con 27 reseñas. Es la opción del Grupo Gastrobrío para rematar cualquier plan con un helado artesanal."}},
+    {"@type":"Question","name":"¿Qué días cierran los restaurantes en Baena del centro?","acceptedAnswer":{"@type":"Answer","text":"En el Grupo Gastrobrío, Picoteo cierra los domingos y Nova Traviola cierra los lunes, así que entre los dos casi siempre hay alguno abierto."}},
+    {"@type":"Question","name":"¿Se puede reservar mesa en algún restaurante de Baena por teléfono?","acceptedAnswer":{"@type":"Answer","text":"Sí, en Picoteo (957 94 54 65) y en Nova Traviola (957 69 24 78) puedes reservar llamando directamente, sin plataformas externas."}}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --ink:#1c1613;
+    --ember:#2d221b;
+    --ember-2:#3a2c22;
+    --cream:#f6efe1;
+    --cream-2:#efe1c8;
+    --paprika:#bf4a28;
+    --paprika-dark:#9c3a1f;
+    --olive:#8f7530;
+    --olive-light:#c9ac5c;
+    --line: rgba(28,22,19,0.12);
+    --line-dark: rgba(246,239,225,0.16);
+    --shadow: 0 20px 50px rgba(28,17,10,0.18);
+    --radius: 4px;
+    --wrap: 1180px;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  ul{ margin:0; padding:0; list-style:none; }
+  h1,h2,h3,h4{ margin:0; font-family:'Bricolage Grotesque',sans-serif; font-weight:700; line-height:1.05; letter-spacing:-0.01em; }
+  p{ margin:0; }
+  button{ font-family:inherit; }
+
+  :focus-visible{ outline:3px solid var(--olive-light); outline-offset:3px; }
+
+  .wrap{ max-width:var(--wrap); margin:0 auto; padding:0 24px; }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'Inter',sans-serif; font-size:0.72rem; font-weight:700;
+    letter-spacing:0.22em; text-transform:uppercase; color:var(--olive);
+  }
+  .eyebrow::before{ content:""; width:26px; height:1px; background:var(--olive); }
+  .section-tag-dark .eyebrow{ color:var(--olive-light); }
+  .section-tag-dark .eyebrow::before{ background:var(--olive-light); }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:15px 26px; border-radius:999px; border:none; cursor:pointer;
+    font-weight:700; font-size:0.95rem; letter-spacing:0.01em;
+    text-decoration:none; white-space:nowrap; transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{ background:var(--paprika); color:#fff; box-shadow:0 10px 26px rgba(191,74,40,0.4); }
+  .btn-primary:hover{ box-shadow:0 14px 30px rgba(191,74,40,0.5); }
+  .btn-ghost{ background:transparent; color:var(--cream); border:1.5px solid var(--line-dark); }
+  .btn-ghost:hover{ background:rgba(246,239,225,0.08); }
+  .btn-outline{ background:transparent; color:var(--ink); border:1.5px solid var(--line); }
+  .btn-outline:hover{ background:var(--cream-2); }
+  .btn-sm{ padding:11px 18px; font-size:0.85rem; }
+
+  .icon{ width:18px; height:18px; flex-shrink:0; }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(28,22,19,0.92); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-dark);
+  }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; height:76px; }
+  .brand{ display:flex; align-items:center; gap:10px; text-decoration:none; }
+  .brand-mark{
+    width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,var(--paprika),var(--olive));
+    display:flex; align-items:center; justify-content:center; color:#fff; font-family:'Bricolage Grotesque'; font-weight:800; font-size:1.05rem;
+  }
+  .brand-name{ color:var(--cream); font-family:'Bricolage Grotesque'; font-weight:700; font-size:1.05rem; letter-spacing:-0.01em; }
+  .brand-name span{ display:block; font-family:'Inter'; font-weight:500; font-size:0.66rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--olive-light); margin-top:1px; }
+
+  .nav-links{ display:flex; align-items:center; gap:30px; }
+  .nav-links a{ color:var(--cream); text-decoration:none; font-size:0.88rem; font-weight:600; opacity:0.85; transition:opacity .15s; }
+  .nav-links a:hover{ opacity:1; }
+  .nav-cta{ display:flex; align-items:center; gap:14px; }
+  .nav-phone{ display:flex; align-items:center; gap:8px; color:var(--cream); text-decoration:none; font-size:0.85rem; font-weight:600; }
+  .nav-phone .icon{ color:var(--olive-light); }
+
+  .hamburger{ display:none; background:none; border:none; color:var(--cream); padding:6px; cursor:pointer; }
+  .mobile-panel{
+    display:none; position:fixed; inset:76px 0 0 0; background:var(--ink); z-index:99;
+    padding:30px 24px; overflow-y:auto;
+  }
+  .mobile-panel.open{ display:block; }
+  .mobile-panel a{ display:block; color:var(--cream); text-decoration:none; font-family:'Bricolage Grotesque'; font-weight:700; font-size:1.5rem; padding:14px 0; border-bottom:1px solid var(--line-dark); }
+  .mobile-panel .btn{ margin-top:24px; width:100%; justify-content:center; }
+
+  @media (max-width:900px){
+    .nav-links{ display:none; }
+    .nav-phone span{ display:none; }
+    .hamburger{ display:block; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative; min-height:92vh; display:flex; align-items:center;
+    color:var(--cream); overflow:hidden; padding:120px 0 90px;
+  }
+  .hero-bg{ position:absolute; inset:0; z-index:0; }
+  .hero-bg img{ width:100%; height:100%; object-fit:cover; filter:brightness(0.28) saturate(1.1); transform:scale(1.08); }
+  .hero-bg::after{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(ellipse 70% 60% at 20% 20%, rgba(191,74,40,0.28) 0%, transparent 60%),
+      linear-gradient(180deg, rgba(28,22,19,0.55) 0%, rgba(28,22,19,0.88) 75%, var(--ink) 100%);
+  }
+  .hero-inner{ position:relative; z-index:2; max-width:760px; }
+  .hero-kicker{ margin-bottom:22px; }
+  .hero h1{
+    font-size:clamp(2.4rem, 5.6vw, 4.1rem);
+    margin-bottom:22px;
+  }
+  .hero h1 em{ font-style:normal; color:var(--olive-light); }
+  .hero-sub{ font-size:1.15rem; color:rgba(246,239,225,0.85); max-width:560px; margin-bottom:36px; }
+  .hero-ctas{ display:flex; flex-wrap:wrap; gap:14px; margin-bottom:48px; }
+  .hero-stats{ display:flex; flex-wrap:wrap; gap:34px; padding-top:28px; border-top:1px solid var(--line-dark); }
+  .hero-stat b{ display:block; font-family:'Bricolage Grotesque'; font-size:1.6rem; font-weight:800; color:var(--olive-light); }
+  .hero-stat span{ font-size:0.78rem; color:rgba(246,239,225,0.7); }
+
+  @media (max-width:600px){
+    .hero{ min-height:auto; padding:110px 0 60px; }
+    .hero-ctas .btn{ width:100%; justify-content:center; }
+  }
+
+  /* ---------- SELECTOR (menu vertical) ---------- */
+  .selector{ background:var(--ink); color:var(--cream); padding:100px 0 110px; }
+  .selector-head{ max-width:640px; margin-bottom:56px; }
+  .selector-head h2{ font-size:clamp(1.9rem,3.6vw,2.6rem); color:var(--cream); margin-top:16px; }
+  .selector-head p{ color:rgba(246,239,225,0.72); margin-top:16px; font-size:1.02rem; }
+
+  .selector-grid{ display:grid; grid-template-columns:1.05fr 1fr; gap:60px; align-items:center; }
+
+  .venue-list{ display:flex; flex-direction:column; }
+  .venue-row{
+    position:relative; display:flex; align-items:center; gap:18px;
+    padding:22px 4px; border-bottom:1px solid var(--line-dark);
+    background:none; border-left:none; border-right:none; border-top:none;
+    color:inherit; text-align:left; cursor:pointer; width:100%;
+  }
+  .venue-row:first-child{ border-top:1px solid var(--line-dark); }
+  .venue-arrow{
+    width:26px; height:26px; flex-shrink:0; color:var(--accent, var(--paprika));
+    opacity:0; transform:translateX(-16px); transition:opacity .28s ease, transform .28s ease;
+  }
+  .venue-row:hover .venue-arrow,
+  .venue-row:focus-visible .venue-arrow,
+  .venue-row.active .venue-arrow{ opacity:1; transform:translateX(0); }
+  .venue-name{
+    font-family:'Bricolage Grotesque'; font-weight:700; font-size:clamp(1.5rem,2.6vw,2.1rem);
+    transition:transform .28s ease, color .28s ease; transform:translateX(-14px);
+  }
+  .venue-row:hover .venue-name,
+  .venue-row:focus-visible .venue-name,
+  .venue-row.active .venue-name{ transform:translateX(0); color:var(--accent, var(--paprika)); }
+  .venue-tag{ font-size:0.78rem; color:rgba(246,239,225,0.55); margin-top:4px; display:block; font-family:'Inter'; font-weight:500; }
+
+  .venue-preview{
+    position:relative; border-radius:12px; overflow:hidden; aspect-ratio:4/5;
+    box-shadow:var(--shadow); background:var(--ember);
+  }
+  .venue-preview img{ width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .45s ease; position:absolute; inset:0; }
+  .venue-preview img.active{ opacity:1; position:relative; }
+  .venue-preview-empty{
+    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:14px; text-align:center; padding:30px; opacity:0; transition:opacity .45s ease;
+  }
+  .venue-preview-empty.active{ opacity:1; }
+  .venue-preview-empty svg{ width:54px; height:54px; color:var(--olive-light); }
+  .venue-preview-empty p{ color:rgba(246,239,225,0.7); font-size:0.88rem; max-width:220px; }
+  .venue-preview-caption{
+    position:absolute; left:0; right:0; bottom:0; padding:22px 24px;
+    background:linear-gradient(0deg, rgba(0,0,0,0.75), transparent);
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+  }
+  .venue-preview-caption span{ color:#fff; font-weight:700; font-family:'Bricolage Grotesque'; font-size:1.05rem; }
+
+  @media (max-width:900px){
+    .selector-grid{ grid-template-columns:1fr; gap:32px; }
+    .venue-preview{ aspect-ratio:16/10; order:-1; }
+  }
+
+  /* ---------- RESERVAS ---------- */
+  .section{ padding:100px 0; }
+  .section-head{ max-width:640px; margin-bottom:52px; }
+  .section-head h2{ font-size:clamp(1.9rem,3.6vw,2.6rem); margin-top:16px; }
+  .section-head p{ margin-top:16px; font-size:1.02rem; color:rgba(28,22,19,0.72); }
+
+  .cards-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media (max-width:860px){ .cards-3{ grid-template-columns:1fr; } }
+
+  .resv-card{
+    background:#fff; border:1px solid var(--line); border-radius:10px; padding:32px 28px;
+    display:flex; flex-direction:column; gap:18px; position:relative; overflow:hidden;
+  }
+  .resv-card::before{ content:""; position:absolute; top:0; left:0; right:0; height:5px; background:var(--accent,var(--paprika)); }
+  .resv-card h3{ font-size:1.3rem; }
+  .resv-card .hours{ font-size:0.92rem; color:rgba(28,22,19,0.7); display:flex; flex-direction:column; gap:6px; }
+  .resv-card .hours li{ display:flex; gap:8px; }
+  .resv-card .hours .icon{ color:var(--accent,var(--paprika)); margin-top:2px; }
+  .pending{ font-size:0.82rem; color:var(--paprika-dark); background:#fbe9e2; padding:6px 10px; border-radius:6px; display:inline-block; font-weight:600; }
+
+  /* ---------- CARTA / CAROUSEL ---------- */
+  .carta-section{ background:var(--ember); color:var(--cream); padding:100px 0 110px; }
+  .cf-stage{ position:relative; height:min(66vw,500px); max-height:500px; margin:56px 0 34px; perspective:1500px; }
+  .cf-card{
+    position:absolute; top:0; left:50%; width:clamp(210px,58vw,320px); height:100%;
+    border-radius:14px; overflow:hidden; background:var(--ember-2);
+    border:1px solid var(--line-dark); cursor:pointer;
+    transition:transform .7s cubic-bezier(.25,1,.5,1), opacity .7s ease, filter .7s ease;
+  }
+  .cf-card img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .cf-card .cf-overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.86) 100%); }
+  .cf-card .cf-content{
+    position:absolute; left:0; right:0; bottom:0; padding:22px 20px; text-align:center;
+    opacity:0; transform:translateY(10px); transition:opacity .4s ease, transform .4s ease;
+  }
+  .cf-card.is-center .cf-content{ opacity:1; transform:translateY(0); }
+  .cf-tag{ font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:700; color:var(--olive-light); }
+  .cf-name{ font-family:'Bricolage Grotesque'; font-weight:700; font-size:1.2rem; color:#fff; margin:8px 0 6px; line-height:1.2; }
+  .cf-desc{ font-size:0.8rem; color:rgba(255,255,255,0.85); font-style:italic; font-family:'Fraunces'; margin-bottom:12px; }
+  .cf-price{ display:inline-block; background:var(--paprika); color:#fff; font-weight:700; font-size:0.85rem; padding:5px 14px; border-radius:999px; }
+
+  .cf-arrow{
+    position:absolute; top:50%; transform:translateY(-50%); z-index:40;
+    width:48px; height:48px; border-radius:50%; background:rgba(0,0,0,0.4); border:1px solid var(--line-dark);
+    color:#fff; display:flex; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .cf-arrow:hover{ background:rgba(0,0,0,0.6); }
+  .cf-prev{ left:0; }
+  .cf-next{ right:0; }
+  @media (max-width:640px){ .cf-arrow{ width:38px; height:38px; } }
+
+  .cf-dots{ display:flex; justify-content:center; gap:8px; }
+  .cf-dot{ width:8px; height:8px; border-radius:999px; background:rgba(246,239,225,0.3); border:none; cursor:pointer; transition:all .3s; }
+  .cf-dot.active{ width:26px; background:var(--olive-light); }
+
+  .carta-links{ display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:44px; }
+
+  /* ---------- DOMICILIO ---------- */
+  .steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; counter-reset:step; }
+  @media (max-width:900px){ .steps{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .steps{ grid-template-columns:1fr; } }
+  .step{ position:relative; padding-top:6px; }
+  .step-num{
+    font-family:'Bricolage Grotesque'; font-weight:800; font-size:2.6rem; color:var(--cream-2);
+    -webkit-text-stroke:1.5px var(--olive); color:transparent; line-height:1; margin-bottom:14px;
+  }
+  .step h3{ font-size:1.08rem; margin-bottom:8px; }
+  .step p{ font-size:0.9rem; color:rgba(28,22,19,0.68); }
+  .domicilio-foot{ margin-top:48px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; background:var(--cream-2); border-radius:10px; padding:24px 28px; }
+  .domicilio-foot p{ font-size:0.92rem; }
+  .domicilio-foot strong{ color:var(--paprika-dark); }
+
+  /* ---------- POR QUÉ ---------- */
+  .why-section{ background:var(--cream-2); }
+  .why-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:30px; }
+  @media (max-width:860px){ .why-grid{ grid-template-columns:1fr; } }
+  .why-card{ background:var(--cream); border-radius:10px; padding:34px 28px; border:1px solid var(--line); }
+  .why-icon{ width:44px; height:44px; border-radius:10px; background:var(--ink); color:var(--olive-light); display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
+  .why-card h3{ font-size:1.2rem; margin-bottom:12px; }
+  .why-card p{ font-size:0.92rem; color:rgba(28,22,19,0.7); }
+
+  /* ---------- OPINIONES ---------- */
+  .rating-badge{ display:flex; align-items:center; gap:14px; margin-bottom:44px; }
+  .rating-badge .stars{ display:flex; gap:2px; color:var(--paprika); }
+  .rating-badge b{ font-family:'Bricolage Grotesque'; font-size:1.3rem; }
+  .rating-badge span{ font-size:0.85rem; color:rgba(28,22,19,0.6); }
+
+  .testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media (max-width:860px){ .testi-grid{ grid-template-columns:1fr; } }
+  .testi-card{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:28px; display:flex; flex-direction:column; gap:16px; }
+  .testi-card p{ font-family:'Fraunces'; font-style:italic; font-size:1.02rem; color:var(--ink); }
+  .testi-who{ display:flex; align-items:center; gap:12px; margin-top:auto; }
+  .testi-avatar{ width:38px; height:38px; border-radius:50%; background:var(--olive); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-family:'Bricolage Grotesque'; font-size:0.9rem; flex-shrink:0; }
+  .testi-who b{ display:block; font-size:0.88rem; }
+  .testi-who span{ font-size:0.78rem; color:rgba(28,22,19,0.55); }
+
+  /* ---------- UBICACIÓN ---------- */
+  .loc-section{ background:var(--ink); color:var(--cream); }
+  .loc-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media (max-width:860px){ .loc-grid{ grid-template-columns:1fr; } }
+  .loc-card{ background:var(--ember); border:1px solid var(--line-dark); border-radius:10px; padding:26px 26px; display:flex; gap:16px; }
+  .loc-card .icon-wrap{ width:40px; height:40px; border-radius:8px; background:rgba(201,172,92,0.14); color:var(--olive-light); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .loc-card h3{ font-size:1.05rem; margin-bottom:6px; color:var(--cream); }
+  .loc-card p{ font-size:0.87rem; color:rgba(246,239,225,0.68); }
+  .loc-card .pending-dark{ font-size:0.78rem; color:var(--olive-light); font-weight:600; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list{ display:flex; flex-direction:column; gap:12px; max-width:820px; }
+  details.faq-item{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:6px 22px; }
+  details.faq-item summary{
+    list-style:none; cursor:pointer; padding:18px 0; display:flex; align-items:center; justify-content:space-between; gap:16px;
+    font-weight:700; font-family:'Bricolage Grotesque'; font-size:1.02rem;
+  }
+  details.faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-plus{ width:22px; height:22px; flex-shrink:0; position:relative; }
+  .faq-plus::before, .faq-plus::after{ content:""; position:absolute; background:var(--paprika); transition:transform .25s ease; }
+  .faq-plus::before{ top:50%; left:0; width:100%; height:2.5px; transform:translateY(-50%); }
+  .faq-plus::after{ left:50%; top:0; height:100%; width:2.5px; transform:translateX(-50%); }
+  details.faq-item[open] .faq-plus::after{ transform:translateX(-50%) rotate(90deg); opacity:0; }
+  details.faq-item .faq-a{ padding:0 0 22px; font-size:0.94rem; color:rgba(28,22,19,0.72); max-width:680px; }
+
+  /* ---------- FOOTER ---------- */
+  footer{ background:var(--ink); color:rgba(246,239,225,0.6); padding:60px 0 30px; }
+  .footer-top{ display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between; padding-bottom:40px; border-bottom:1px solid var(--line-dark); }
+  .footer-brand p{ margin-top:14px; max-width:280px; font-size:0.86rem; }
+  .footer-cols{ display:flex; gap:60px; flex-wrap:wrap; }
+  .footer-col h4{ color:var(--cream); font-size:0.82rem; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:16px; font-family:'Inter'; font-weight:700; }
+  .footer-col a{ display:block; color:rgba(246,239,225,0.6); text-decoration:none; font-size:0.88rem; margin-bottom:10px; }
+  .footer-col a:hover{ color:var(--cream); }
+  .footer-bottom{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; padding-top:26px; font-size:0.78rem; }
+
+  /* section variants */
+  .bleed-dark{ color:var(--cream); }
+
+  /* reveal on load */
+  @media (prefers-reduced-motion:no-preference){
+    .fade-up{ opacity:0; transform:translateY(18px); animation:fadeUp .7s ease forwards; }
+    .fade-up.d1{ animation-delay:.1s; } .fade-up.d2{ animation-delay:.2s; } .fade-up.d3{ animation-delay:.32s; }
+    @keyframes fadeUp{ to{ opacity:1; transform:none; } }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="wrap nav-row">
+    <a href="#top" class="brand">
+      <span class="brand-mark">GB</span>
+      <span class="brand-name">Grupo Gastrobrío<span>Restaurantes en Baena</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#elige">Elige tu local</a>
+      <a href="#reservas">Reservas</a>
+      <a href="#carta">Carta</a>
+      <a href="#domicilio">A domicilio</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+34957945465"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>957 94 54 65</span></a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#elige">Elige tu local</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#carta">Carta</a>
+    <a href="#domicilio">A domicilio</a>
+    <a href="#porque">Por qué elegirnos</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#faq">FAQ</a>
+    <a href="tel:+34957945465" class="btn btn-primary">Llamar a Picoteo</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <img src="https://picoteobaena.com/wp-content/uploads/2022/03/local-picoteo1280x853-2.jpg" alt="Interior de Picoteo, Grupo Gastrobrío en Baena">
+  </div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow section-tag-dark hero-kicker fade-up">Baena · Córdoba</div>
+    <h1 class="fade-up d1">Restaurante en Baena: <em>Grupo Gastrobrío</em></h1>
+    <p class="hero-sub fade-up d2">Picoteo, Nova Traviola, Guisoteo y Gelateo — cuatro locales, un mismo compromiso con el producto de temporada y el trato cercano. Elige tu plan y en 30 segundos tienes mesa.</p>
+    <div class="hero-ctas fade-up d3">
+      <a href="#elige" class="btn btn-primary">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        Elegir mi restaurante
+      </a>
+      <a href="tel:+34957945465" class="btn btn-ghost">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Llamar ahora
+      </a>
+    </div>
+    <div class="hero-stats fade-up d3">
+      <div class="hero-stat"><b>Desde 2010</b><span>Trayectoria en Baena</span></div>
+      <div class="hero-stat"><b>4 locales</b><span>Un mismo grupo</span></div>
+      <div class="hero-stat"><b>5,0★</b><span>Valoración en Google</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SELECTOR DE LOCAL ================= -->
+<section class="selector" id="elige">
+  <div class="wrap">
+    <div class="selector-head">
+      <div class="eyebrow section-tag-dark">¿Dónde te apetece hoy?</div>
+      <h2>Elige tu plan y te decimos qué restaurante en Baena te encaja</h2>
+      <p>Pasa el cursor (o toca en móvil) sobre cada nombre para ver el local.</p>
+    </div>
+
+    <div class="selector-grid">
+      <ul class="venue-list" id="venueList">
+        <li>
+          <button class="venue-row active" data-venue="picoteo" style="--accent:#c9d94a" aria-current="true">
+            <svg class="venue-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <span>
+              <span class="venue-name">Picoteo</span>
+              <span class="venue-tag">Tapeo informal y cañas</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button class="venue-row" data-venue="traviola" style="--accent:#d99a3f">
+            <svg class="venue-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <span>
+              <span class="venue-name">Nova Traviola</span>
+              <span class="venue-tag">Pizza y hamburguesas a domicilio</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button class="venue-row" data-venue="guisoteo" style="--accent:#bf4a28">
+            <svg class="venue-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <span>
+              <span class="venue-name">Guisoteo</span>
+              <span class="venue-tag">Cena especial o de grupo</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button class="venue-row" data-venue="gelateo" style="--accent:#e8b4c8">
+            <svg class="venue-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <span>
+              <span class="venue-name">Gelateo</span>
+              <span class="venue-tag">Postre y helado artesanal</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="venue-preview">
+        <img class="active" data-img="picoteo" src="https://picoteobaena.com/wp-content/uploads/2022/03/local-picoteo-sin-casino1280x853-2.jpg" alt="Local de Picoteo en Baena">
+        <img data-img="traviola" src="https://picoteobaena.com/wp-content/uploads/2022/03/local-traviola1280x853-2.jpg" alt="Local de Nova Traviola en Baena">
+        <img data-img="guisoteo" src="https://picoteobaena.com/wp-content/uploads/2026/07/Cabecera-carta-guisoteo1.jpg" alt="Rótulo de Guisoteo tallado en madera">
+        <div class="venue-preview-empty" data-empty="gelateo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 3 8h8c1-3 3-5 3-8a7 7 0 0 0-7-7z"/><path d="M9 17h6l-1 4h-4l-1-4z"/></svg>
+          <p>Gelateo aún no tiene fotografía propia — reportaje en camino.</p>
+        </div>
+        <div class="venue-preview-caption" id="previewCaption">
+          <span id="previewLabel">Picoteo</span>
+          <a href="#reservas" class="btn btn-sm btn-primary" id="previewCta">Ver reservas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESERVAS ================= -->
+<section class="section" id="reservas">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Reservar mesa y horarios</div>
+      <h2>Reservar te lleva una llamada</h2>
+      <p>Sin plataformas externas, sin esperas: llamas y hablas directamente con el restaurante.</p>
+    </div>
+
+    <div class="cards-3">
+      <div class="resv-card" style="--accent:#c9d94a">
+        <h3>Picoteo</h3>
+        <a href="tel:+34957945465" class="btn btn-outline btn-sm">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          957 94 54 65
+        </a>
+        <ul class="hours">
+          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lunes a viernes: 08:30–00:00</li>
+          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Sábados: 13:00–00:00</li>
+          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Domingo: cerrado</li>
+        </ul>
+      </div>
+
+      <div class="resv-card" style="--accent:#d99a3f">
+        <h3>Nova Traviola</h3>
+        <a href="tel:+34957692478" class="btn btn-outline btn-sm">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          957 69 24 78
+        </a>
+        <ul class="hours">
+          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Martes a domingo: 20:00–00:00</li>
+          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lunes: cerrado</li>
+        </ul>
+      </div>
+
+      <div class="resv-card" style="--accent:#bf4a28">
+        <h3>Guisoteo</h3>
+        <span class="pending">Teléfono y horario pendientes de confirmar</span>
+        <p style="font-size:0.88rem;color:rgba(28,22,19,0.65)">Para grupos de más de 8 personas, recomendamos avisar con antelación — la carta de brasas se prepara al momento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARTA (COVERFLOW) ================= -->
+<section class="carta-section" id="carta">
+  <div class="wrap">
+    <div class="section-head section-tag-dark">
+      <div class="eyebrow section-tag-dark">Ver la carta de cada restaurante</div>
+      <h2 style="color:var(--cream)">Precios claros, alérgenos marcados, cero sorpresas</h2>
+      <p style="color:rgba(246,239,225,0.72)">Una muestra de las tres cartas. Decide antes de venir, no cuando ya estás sentado a la mesa.</p>
+    </div>
+
+    <div class="cf-stage" id="cfStage">
+      <button class="cf-arrow cf-prev" id="cfPrev" aria-label="Plato anterior">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <!-- cards injected by JS -->
+      <button class="cf-arrow cf-next" id="cfNext" aria-label="Plato siguiente">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+    <div class="cf-dots" id="cfDots"></div>
+
+    <div class="carta-links">
+      <a href="https://picoteobaena.com/la-carta/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Carta Picoteo completa</a>
+      <a href="https://picoteobaena.com/carta-traviola/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Carta Traviola completa</a>
+      <a href="https://picoteobaena.com/carta-guisoteo/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Carta Guisoteo completa</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOMICILIO ================= -->
+<section class="section" id="domicilio">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Pedido a domicilio en Baena</div>
+      <h2>¿No te apetece salir? Te lo llevamos por 1€</h2>
+      <p>Picoteo y Nova Traviola reparten con personal propio — nada de apps de terceros ni comisiones ocultas.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><h3>Llama al restaurante</h3><p>Picoteo (957 94 54 65) o Traviola (957 69 24 78). Te atiende una persona, no un contestador.</p></div>
+      <div class="step"><div class="step-num">02</div><h3>Preparamos tu pedido</h3><p>Recién hecho, no de nevera. Te indican el tiempo estimado al llamar.</p></div>
+      <div class="step"><div class="step-num">03</div><h3>Te lo llevamos nosotros</h3><p>Reparto propio del restaurante, sin depender de plataformas externas.</p></div>
+      <div class="step"><div class="step-num">04</div><h3>Lo disfrutas en casa</h3><p>Recién salido de cocina, a un euro de gastos de envío.</p></div>
+    </div>
+
+    <div class="domicilio-foot">
+      <p>Horario de pedidos: <strong>Picoteo</strong> L-S 12:00–17:00 y 20:00–00:00 · <strong>Traviola</strong> Ma-D 20:00–00:00</p>
+      <span class="pending">Guisoteo y Gelateo solo sirven en local</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= POR QUÉ ELEGIRNOS ================= -->
+<section class="section why-section" id="porque">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Por qué elegir Grupo Gastrobrío</div>
+      <h2>Argumentos, no adjetivos</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Producto de temporada y de proximidad</h3>
+        <p>En verano, buena parte de lo que llega a la mesa de Picoteo sale de una huerta en Albendín, a pocos kilómetros de Baena. No es un eslogan: es de dónde viene la verdura de tu plato.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Más de 15 años de trayectoria en Baena</h3>
+        <p>Picoteo nació en 2010 de la mano de Teo Espartero, en hostelería desde los 14 años. El grupo ha crecido a cuatro locales sin perder el trato de negocio de pueblo.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Alérgenos marcados en cada plato</h3>
+        <p>En las tres cartas verás los alérgenos numerados junto al plato, no solo "consultar con el camarero". Traviola, además, tiene pizzas, burgers, bocadillos y perritos sin gluten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OPINIONES ================= -->
+<section class="section" id="opiniones">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Opiniones de nuestros clientes</div>
+      <h2>Lo que se repite en las reseñas</h2>
+    </div>
+
+    <div class="rating-badge">
+      <div class="stars">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4.3L6 21l1.6-7.8L2 9h7z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4.3L6 21l1.6-7.8L2 9h7z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4.3L6 21l1.6-7.8L2 9h7z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4.3L6 21l1.6-7.8L2 9h7z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4.3L6 21l1.6-7.8L2 9h7z"/></svg>
+      </div>
+      <div><b>5,0 sobre 5</b> <span>&nbsp;· valoración en Google (Picoteo y Gelateo)</span></div>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p>"Uno de los sitios donde mejor se come en Baena: carta amplia, presentación cuidada y una relación calidad-precio muy justa."</p>
+        <div class="testi-who"><div class="testi-avatar">S</div><div><b>Sake</b><span>Cliente de Picoteo</span></div></div>
+      </div>
+      <div class="testi-card">
+        <p>"Calidad y elaboración fuera de lo normal, muy buen precio y un trato al cliente cuidado de principio a fin."</p>
+        <div class="testi-who"><div class="testi-avatar">E</div><div><b>Eva Sierra</b><span>Cliente de Picoteo</span></div></div>
+      </div>
+      <div class="testi-card">
+        <p>"Cocina de lujo a un precio accesible para cualquier bolsillo — y el postre, de otro nivel."</p>
+        <div class="testi-who"><div class="testi-avatar">P</div><div><b>Paco Mendoza</b><span>Cliente de Picoteo</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= UBICACIÓN ================= -->
+<section class="section loc-section" id="ubicacion">
+  <div class="wrap">
+    <div class="section-head section-tag-dark">
+      <div class="eyebrow section-tag-dark">Dónde estamos y cómo llegar</div>
+      <h2 style="color:var(--cream)">En el centro de Baena</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><h3>Picoteo</h3><p>Av. Padre Villoslada, 29, 14850 Baena, Córdoba</p></div>
+      </div>
+      <div class="loc-card">
+        <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><h3>Nova Traviola</h3><p class="pending-dark">Dirección exacta pendiente de confirmar</p></div>
+      </div>
+      <div class="loc-card">
+        <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><h3>Guisoteo</h3><p class="pending-dark">Dirección exacta pendiente de confirmar</p></div>
+      </div>
+      <div class="loc-card">
+        <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><h3>Gelateo</h3><p>C. Salvador Muñoz, 2, 14850 Baena, Córdoba</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Preguntas frecuentes</div>
+      <h2>Todo lo que se pregunta antes de venir</h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>¿Cuál es el mejor restaurante para comer en Baena?<span class="faq-plus"></span></summary>
+        <div class="faq-a">Depende de qué te apetezca. Picoteo para tapear sin protocolos, Nova Traviola si te apetece pizza o hamburguesa, Guisoteo para una cena de nivel, y Gelateo para el helado de después. Picoteo lleva abierto desde 2010 y mantiene una valoración alta y sostenida en Google.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué restaurante en Baena tiene opciones sin gluten?<span class="faq-plus"></span></summary>
+        <div class="faq-a">Nova Traviola es el que más variedad tiene: pizzas, hamburguesas, bocadillos y perritos en versión sin gluten. En Picoteo y Guisoteo, cada plato indica sus alérgenos numerados.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Dónde puedo cenar en Baena si voy con un grupo grande?<span class="faq-plus"></span></summary>
+        <div class="faq-a">Guisoteo: tiene platos para compartir como el centro de chuletón a la brasa o la tabla de quesos de Zuheros. Si sois más de 8, mejor llamar con antelación.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hay algún restaurante en Baena que haga pedidos a domicilio?<span class="faq-plus"></span></summary>
+        <div class="faq-a">Sí: Picoteo (957 94 54 65, L-S) y Nova Traviola (957 69 24 78, Ma-D). Reparto propio, 1€ de gastos de envío.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué restaurante recomiendas para una cena especial o de cumpleaños?<span class="faq-plus"></span></summary>
+        <div class="faq-a">Guisoteo. Es la carta con el ticket medio más alto del grupo, con platos como el tataki de atún rojo o el pulpo a la brasa con mayonesa de AOVE.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto se paga de media en un restaurante en Baena?<span class="faq-plus"></span></summary>
+        <div class="faq-a">En Picoteo, entre 6€ y 22€. En Traviola, las pizzas rondan 8,50€–10,50€. Guisoteo es el ticket más alto, con platos para compartir desde 28€.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Se puede reservar mesa por teléfono?<span class="faq-plus"></span></summary>
+        <div class="faq-a">Sí, en Picoteo (957 94 54 65) y Nova Traviola (957 69 24 78), sin plataformas externas. Para Guisoteo, en breve tendremos línea directa también.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-mark">GB</span>
+          <span class="brand-name" style="color:var(--cream)">Grupo Gastrobrío</span>
+        </div>
+        <p>Picoteo, Nova Traviola, Guisoteo y Gelateo — cuatro locales en Baena, un mismo compromiso con el buen producto.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Restaurantes</h4>
+          <a href="#elige">Picoteo</a>
+          <a href="#elige">Nova Traviola</a>
+          <a href="#elige">Guisoteo</a>
+          <a href="#elige">Gelateo</a>
+        </div>
+        <div class="footer-col">
+          <h4>Enlaces</h4>
+          <a href="#reservas">Reservas</a>
+          <a href="#carta">Carta</a>
+          <a href="#faq">Preguntas frecuentes</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="tel:+34957945465">Picoteo — 957 94 54 65</a>
+          <a href="tel:+34957692478">Traviola — 957 69 24 78</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Grupo Gastrobrío. Todos los derechos reservados.</span>
+      <span>Baena, Córdoba</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- Mobile nav ----
+  const hbBtn = document.getElementById('hamburgerBtn');
+  const mPanel = document.getElementById('mobilePanel');
+  hbBtn.addEventListener('click', () => {
+    const open = mPanel.classList.toggle('open');
+    hbBtn.setAttribute('aria-expanded', open);
+  });
+  mPanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mPanel.classList.remove('open');
+    hbBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  // ---- Venue selector ----
+  const venueRows = document.querySelectorAll('.venue-row');
+  const previewImgs = document.querySelectorAll('.venue-preview img');
+  const previewEmpty = document.querySelector('.venue-preview-empty');
+  const previewLabel = document.getElementById('previewLabel');
+  const previewCta = document.getElementById('previewCta');
+  const venueMeta = {
+    picoteo:  { label:'Picoteo',       cta:'Ver reservas', href:'#reservas' },
+    traviola: { label:'Nova Traviola', cta:'Ver carta',     href:'#carta' },
+    guisoteo: { label:'Guisoteo',      cta:'Ver reservas', href:'#reservas' },
+    gelateo:  { label:'Gelateo',       cta:'Cómo llegar',  href:'#ubicacion' },
+  };
+
+  function setVenue(key){
+    venueRows.forEach(r => r.classList.toggle('active', r.dataset.venue === key));
+    previewImgs.forEach(img => img.classList.toggle('active', img.dataset.img === key));
+    previewEmpty.classList.toggle('active', key === 'gelateo');
+    previewLabel.textContent = venueMeta[key].label;
+    previewCta.textContent = venueMeta[key].cta;
+    previewCta.setAttribute('href', venueMeta[key].href);
+  }
+
+  venueRows.forEach(row => {
+    const key = row.dataset.venue;
+    row.addEventListener('mouseenter', () => setVenue(key));
+    row.addEventListener('focus', () => setVenue(key));
+    row.addEventListener('click', () => setVenue(key));
+  });
+
+  // ---- Coverflow carousel ----
+  const dishes = [
+    { tag:'Picoteo · Platos de picoteo', name:'Croquetas de txuleta madurada', desc:'Cremosas, hechas en casa', price:'12,00€', img:'https://picoteobaena.com/wp-content/uploads/2022/07/platos-picoteo-1.jpg' },
+    { tag:'Picoteo · Pescados', name:'Pulpo a la brasa, crema trufada de pimentón', desc:'Con crema trufada de pimentón', price:'18,90€', img:'https://picoteobaena.com/wp-content/uploads/2022/07/pescados-1.jpg' },
+    { tag:'Traviola · Pizzas', name:'Burrata: mortadela y pistachos', desc:'Tomate, mozzarella, burrata, rúcula', price:'10,50€', img:'https://picoteobaena.com/wp-content/uploads/2022/02/Pizzas.jpg' },
+    { tag:'Traviola · Hamburguesas', name:'Smash Traviola 2.0', desc:'Pulled pork, cheddar, bacon crujiente', price:'9,90€', img:'https://picoteobaena.com/wp-content/uploads/2022/03/hamburguesas-1.jpg' },
+    { tag:'Guisoteo · Atún rojo', name:'Tataki de atún rojo', desc:'Crema fría de almendras y mango', price:'14,00€', img:'https://picoteobaena.com/wp-content/uploads/2026/07/Guisoteo-seccion-atun-rojo.jpg' },
+    { tag:'Guisoteo · Carnes', name:'Centro de chuletón (300g)', desc:'Brasas de carbón de coco', price:'28,00€', img:'https://picoteobaena.com/wp-content/uploads/2026/07/guisoteo-seccion-carnes.jpg' },
+    { tag:'Guisoteo · Pescados', name:'Pulpo a la brasa, mayonesa de AOVE', desc:'Con aguacate braseado', price:'19,00€', img:'https://picoteobaena.com/wp-content/uploads/2026/07/Guisoteo-seccion-pescados.jpg' },
+    { tag:'Picoteo · Postres', name:'Tarta de queso top', desc:'Con un horneado perfecto', price:'6,00€', img:'https://picoteobaena.com/wp-content/uploads/2025/09/Postres1.jpg' },
+  ];
+
+  const stage = document.getElementById('cfStage');
+  const dotsWrap = document.getElementById('cfDots');
+  let current = 0;
+  const total = dishes.length;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  dishes.forEach((d, i) => {
+    const card = document.createElement('div');
+    card.className = 'cf-card';
+    card.dataset.idx = i;
+    card.innerHTML = `
+      <img src="${d.img}" alt="${d.name}">
+      <div class="cf-overlay"></div>
+      <div class="cf-content">
+        <div class="cf-tag">${d.tag}</div>
+        <div class="cf-name">${d.name}</div>
+        <div class="cf-desc">${d.desc}</div>
+        <span class="cf-price">${d.price}</span>
+      </div>`;
+    card.addEventListener('click', () => { if(i !== current) goTo(i); });
+    stage.appendChild(card);
+  });
+
+  dishes.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'cf-dot';
+    dot.setAttribute('aria-label', 'Ir al plato ' + (i+1));
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  function layout(){
+    const cards = stage.querySelectorAll('.cf-card');
+    const cardW = cards[0] ? cards[0].getBoundingClientRect().width : 300;
+    const off1 = cardW * 0.86, off2 = cardW * 1.52;
+    cards.forEach(card => {
+      const i = parseInt(card.dataset.idx, 10);
+      let offset = (i - current + total) % total;
+      if (offset > total/2) offset -= total;
+
+      let tx = 0, scale = 0.4, rot = 0, op = 0, z = 0, blur = 2, bright = 0.4, center=false;
+      const abs = Math.abs(offset);
+      if (offset === 0){ center=true; tx=0; scale=1; rot=0; op=1; z=30; blur=0; bright=1; }
+      else if (offset === 1){ tx=off1; scale=.84; rot=-22; op=.6; z=20; blur=0; bright=.7; }
+      else if (offset === -1){ tx=-off1; scale=.84; rot=22; op=.6; z=20; blur=0; bright=.7; }
+      else if (offset === 2){ tx=off2; scale=.68; rot=-34; op=.32; z=10; blur=1; bright=.5; }
+      else if (offset === -2){ tx=-off2; scale=.68; rot=34; op=.32; z=10; blur=1; bright=.5; }
+
+      card.style.transform = `translateX(calc(-50% + ${tx}px)) scale(${scale}) rotateY(${rot}deg)`;
+      card.style.opacity = op;
+      card.style.zIndex = z;
+      card.style.filter = `brightness(${bright}) blur(${blur}px)`;
+      card.classList.toggle('is-center', center);
+      card.style.pointerEvents = abs <= 2 ? 'auto' : 'none';
+    });
+    [...dotsWrap.children].forEach((dot,i) => dot.classList.toggle('active', i===current));
+  }
+
+  function goTo(i){ current = ((i % total) + total) % total; layout(); }
+  document.getElementById('cfPrev').addEventListener('click', () => goTo(current-1));
+  document.getElementById('cfNext').addEventListener('click', () => goTo(current+1));
+  window.addEventListener('resize', layout);
+  layout();
+
+  // touch swipe
+  let touchX = 0;
+  stage.addEventListener('touchstart', e => touchX = e.touches[0].clientX, {passive:true});
+  stage.addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(diff) > 40) diff < 0 ? goTo(current+1) : goTo(current-1);
+  }, {passive:true});
+
+  // gentle autoplay, paused on hover/reduced motion
+  if (!reduceMotion){
+    let auto = setInterval(() => goTo(current+1), 5500);
+    stage.addEventListener('mouseenter', () => clearInterval(auto));
+    stage.addEventListener('mouseleave', () => { auto = setInterval(() => goTo(current+1), 5500); });
+  }
+</script>
+</body>
+</html>
