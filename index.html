@@ -555,9 +555,9 @@
     <div class="cf-dots" id="cfDots"></div>
 
     <div class="carta-links">
-      <a href="/picoteo/carta/index.html" class="btn btn-ghost btn-sm">Carta Picoteo completa</a>
-      <a href="/traviola/carta/index.html" class="btn btn-ghost btn-sm">Carta Traviola completa</a>
-      <a href="/guisoteo/carta/index.html" class="btn btn-ghost btn-sm">Carta Guisoteo completa</a>
+      <a href="/picoteo/index.html#carta" class="btn btn-ghost btn-sm">Carta Picoteo completa</a>
+      <a href="/traviola/index.html#carta" class="btn btn-ghost btn-sm">Carta Traviola completa</a>
+      <a href="/guisoteo/index.html#carta" class="btn btn-ghost btn-sm">Carta Guisoteo completa</a>
     </div>
   </div>
 </section>
@@ -795,7 +795,7 @@
     const key = row.dataset.venue;
     row.addEventListener('mouseenter', () => setVenue(key));
     row.addEventListener('focus', () => setVenue(key));
-    row.addEventListener('click', () => setVenue(key));
+    row.addEventListener('click', () => { window.location.href = '/' + key + '/index.html'; });
   });
 
   // ---- Coverflow carousel ----

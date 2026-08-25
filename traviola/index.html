@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Traviola | Grupo Gastrobrío</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1613; --ember:#2d221b; --cream:#f6efe1; --cream-2:#efe1c8;
+    --paprika:#bf4a28; --olive:#8f7530; --olive-light:#c9ac5c;
+    --line: rgba(28,22,19,0.12); --accent: #d99a3f;
+    --wrap: 1000px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif; font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img { max-width: 100%; display: block; border-radius: 8px; }
+  .wrap{ max-width:var(--wrap); margin:0 auto; padding:40px 24px; }
+  h1, h2, h3{ font-family:'Bricolage Grotesque',sans-serif; margin:0; line-height:1.1; }
+  a{ color:inherit; text-decoration:none; }
+  
+  header{ text-align:center; margin-bottom:60px; padding-top:20px; }
+  .brand-back{ display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:0.85rem; color:var(--olive); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:20px; transition:color .2s; }
+  .brand-back:hover{ color:var(--paprika); }
+  header h1{ font-size:clamp(2.5rem, 6vw, 4rem); margin-bottom:12px; color:var(--accent); }
+  header p{ color:rgba(28,22,19,0.7); font-size:1.1rem; }
+  
+  .grid-2{ display:grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; align-items: start; }
+  @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+  
+  .section-title { font-size: 2rem; margin-bottom: 20px; border-bottom: 2px solid var(--accent); padding-bottom: 10px; display: inline-block; }
+  .text-content { font-size: 1.05rem; color: rgba(28,22,19,0.85); }
+  
+  .info-card { background: #fff; padding: 30px; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 30px; }
+  .info-card h3 { font-size: 1.4rem; margin-bottom: 16px; color: var(--accent); }
+  .info-card p { margin-bottom: 10px; }
+  .info-card strong { color: var(--ink); }
+  
+  .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 24px; background: var(--accent); color: #fff; border-radius: 99px; font-weight: 700; font-size: 1.05rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 14px rgba(0,0,0,0.15); margin-top: 10px; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+  
+  .reviews { background: var(--cream-2); padding: 40px; border-radius: 12px; margin-bottom: 60px; }
+  .review-item { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.1rem; margin-bottom: 20px; }
+  .rating-badge { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.2rem; background: var(--accent); color: #fff; padding: 6px 16px; border-radius: 99px; margin-bottom: 24px; }
+  
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 60px; }
+  .gallery img { width: 100%; height: 250px; object-fit: cover; }
+  
+  .map-container { width: 100%; height: 350px; border-radius: 12px; overflow: hidden; margin-top: 20px; border: 1px solid var(--line); }
+  
+  /* Menu styles */
+  .carta-container { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--line); margin-bottom: 60px; }
+  .category { margin-bottom: 40px; }
+  .category h2 { font-size: 1.6rem; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid var(--line); text-transform: uppercase; }
+  .item { display: flex; flex-direction: column; gap: 4px; margin-bottom: 20px; }
+  .item-header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .item-name { font-weight: 700; font-size: 1.1rem; text-transform: uppercase; }
+  .item-dots { flex-grow: 1; border-bottom: 1px dotted var(--line); position: relative; top: -6px; }
+  .item-price { font-weight: 700; font-family: 'Bricolage Grotesque'; font-size: 1.2rem; color: var(--accent); }
+  .item-desc { font-family: 'Fraunces', serif; font-style: italic; font-size: 0.95rem; color: rgba(28,22,19,0.8); }
+  .item-allergens { font-size: 0.75rem; color: var(--olive); font-weight: 600; margin-top: 2px; display: inline-block; padding: 2px 8px; background: var(--cream-2); border-radius: 4px; align-self: flex-start; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="/" class="brand-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Volver al Grupo Gastrobrío
+    </a>
+    <h1>Nova Traviola</h1>
+    <p>Baena, Córdoba</p>
+  </header>
+  
+  <div class="grid-2">
+    <div>
+      <h2 class="section-title">Nuestra Historia</h2>
+      <div class="text-content">
+        <p>La Nova Traviola es el espacio fast-casual del Grupo Gastrobrío. Especializados en pizzas, calzones, hamburguesas, bocadillos y perritos, ofrecemos la carta sin gluten más completa del grupo (con opciones aptas en pizzas, hamburguesas, bocadillos y perritos). Ideal para una cena informal o para disfrutar en casa con nuestro reparto propio.</p>
+      </div>
+      
+      <div style="margin-top: 40px;">
+        <h2 class="section-title">Ubicación y Horario</h2>
+        <div class="info-card">
+          <h3>📍 Dirección</h3>
+          <p>Baena, Córdoba</p>
+          <div class="map-container">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Baena,+Cordoba&output=embed"></iframe>
+          </div>
+        </div>
+        
+        <div class="info-card">
+          <h3>🕒 Horario</h3>
+          <p>Martes a domingo 20:00–00:00<br>Lunes cerrado<br>Reparto a domicilio: Martes a domingo 20:00–00:00</p>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="info-card" style="text-align: center; background: var(--cream-2); border-color: transparent;">
+        <h3>Reserva tu mesa</h3>
+        <p>Llámanos directamente para asegurar tu sitio.</p>
+        <p style="font-size: 1.8rem; font-weight: 800; font-family: 'Bricolage Grotesque'; margin: 15px 0;">957 69 24 78</p>
+        <a href="tel:+34957692478" class="btn">Llamar ahora</a>
+      </div>
+      
+      <div class="reviews">
+        <div class="rating-badge">★ 4,8 en Google</div>
+        <div class="review-item">"La mejor opción sin gluten de Baena, las pizzas están increíbles y el trato es inmejorable." - Cliente habitual</div><div class="review-item">"Llega rápido a casa y las hamburguesas son espectaculares." - María</div>
+      </div>
+      
+      <div class="gallery"><img src="https://picoteobaena.com/wp-content/uploads/2022/03/local-traviola1280x853-2.jpg" alt="Nova Traviola"></div>
+    </div>
+  </div>
+  
+  
+  <div id="carta">
+    <h2 class="section-title" style="text-align: center; display: block; margin: 0 auto 30px;">Nuestra Carta Completa</h2>
+    <div class="carta-container">
+      
+    <section class="category">
+      <h2>novedad</h2>
+    </section>
+    <section class="category">
+      <h2>DeliciasNova traviola</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">MARGARITA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,50€</span>
+        </div>
+        <div class="item-desc">Extra de Tomate, Mozzarella, Orégano.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">diavola</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, jamón serrano, salami picante, Pique y aceite de albahaca.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">ibéricos e fungi</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, jamón serrano, champiñones, parmesano y aceite de albahaca</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">CUATRO QUESOS</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, y Mezcla de Quesos.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Burrata</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, Burrata, mortadela siciliana con pistachos, rúcula, parmesano y aceite de albahaca.</div>
+        <div class="item-allergens">Alérgenos: 3,4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">PICOTEO</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Confitura Tomate, Tomate Natural, Virutas Jamón, Mozzarella, Queso de Zuheros y Orégano.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">LA CALLE</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, York,  Salchichas, Bacon y Huevos.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">10 MARINERA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, Gambas, Mejillones, Atún, Anchoas, Alcaparras y Delicias de Mar.</div>
+        <div class="item-allergens">Alérgenos: 1,4,6,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">11 SALAMI</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, Salami, Cebolla y Pimiento Verde.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">pesto capresse</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,50€</span>
+        </div>
+        <div class="item-desc">Salsa de pesto al pomodoro, Mozzarella flor di Latte, tomatitos  cherry y secos, albahaca, Pollo troceado y aceite de albahaca</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">CARBONARA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Mozzarella, Orégano, Doble de Bacon,  Cebolla y Salsa Carbonara.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Trufa</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,50€</span>
+        </div>
+        <div class="item-desc">Crema de queso trufada, rúcula, cherry panceta o guacamole laminado, yema curada a baja temperatura, orégano y aceite de albahaca.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Al gusto</span>
+          <span class="item-dots"></span>
+          <span class="item-price">Base 8,5 + 0,5€/ingrediente€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, aceite de albahaca INGREDIENTES: Cebolla, cebolla caramelizada, bacon, piña, aceituna, pollo,, york, salchichas, jamón serrano, mortadela, gambas al ajillo, atún, anchoas, alcaparras, salami, pollo kebab, palitos de cangrejo, pimiento verde y rojo, champiñones, maiz, salsa BBQ, salsa Yogurth</div>
+        <div class="item-allergens">Alérgenos: CONSULTAR</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">PEPERONI</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano y Peperoni.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">AL AJILLO</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, Gambas, Ajo y Aceite.</div>
+        <div class="item-allergens">Alérgenos: 1,4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">DE POLLO</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, Pollo, Bacon, Ajo y Cebolla.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">BARBACOA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Mozzarella, Orégano, Salchichas, Bacon y Salsa Barbacoa.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">ESCOPETAS</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, Champiñón, York, Atún, Bacon y Maiz.</div>
+        <div class="item-allergens">Alérgenos: 4,6,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">KEBAB</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, Carne de Kebab y Salsa Yogur.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Calzone clásico</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, Pollo, Bacon, Ajo, Cebolla. y aceite de albaha</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Calzone Atún</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, Pollo, Bacon, Ajo, Cebolla, atún y aceite de albaha</div>
+        <div class="item-allergens">Alérgenos: 4,6,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Calzone 4 quesos</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, mezcla quesos selectos y aceite de albaha</div>
+        <div class="item-allergens">Alérgenos: 4,6,11</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>¡pizzas sin gluten!</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">york con salchichas</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano y Peperoni.</div>
+        <div class="item-allergens">Alérgenos: 11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">bbq con salchichas y york</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, York y Gambas.</div>
+        <div class="item-allergens">Alérgenos: 11,13</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">4 quesos</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, Roquefort y Anchoas.</div>
+        <div class="item-allergens">Alérgenos: 6,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">kebab</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-desc">Tomate, Mozzarella, Orégano, Pollo kebab, salsa de yogurt y aceite de albahaca .</div>
+        <div class="item-allergens">Alérgenos: CONSULTAR</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>pizzas DULCES</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Fresa & Nubes</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-desc">Mozarella flor di latte, sirope de fresa, natillas y nubes.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Pistacho deluxe</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-desc">Mozarella flor di latte, sirope de pistacho, natillas y pistacho natural picado.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Lotus Crunch</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-desc">Mozarella flor di latte, caramelo, natillas y galletas lotus y pepitas crujientes.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Nutella</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-desc">Mozarella flor di latte, nutella, conguitos y chips de chocolate.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Nutella y Marshmallows</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,50€</span>
+        </div>
+        <div class="item-desc">Mozarella flor di latte, nutella, conguitos y chips de chocolate.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Baguettes</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">LOMO, TOMATE Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">5,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">LOMO, QUESO, TOMATE Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">5,50€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">LOMO, PIMIENTOS, JAMÓN SERRANO, QUESO, TOMATE Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">TORTILLA FRANCESA, TOMATE, Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">4,50€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,5</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">TORTILLA PATATAS Y TOMATE</span>
+          <span class="item-dots"></span>
+          <span class="item-price">4,50€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,5</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">VEGETAL YORK, ESPÁRRAGOS, TOMATE, ATÚN Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">5,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,6</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">PECHUGA POLLO,  TOMATE Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">5,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">PECHUGA POLLO, queso, TOMATE Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">5,50€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">BACON, QUESO, PIMIENTOS, TOMATE Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">KEBAB, LECHUGA, TOMATE, CEBOLLA, MAÍZ Y SALSA YOGUR</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Bocadillos sin gluten</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">LOMO, TOMATE Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">5,50€</span>
+        </div>
+        <div class="item-allergens">Sin alérgenos</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">LOMO, QUESO, TOMATE Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">PECHUGA POLLO,  TOMATE Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">5,50€</span>
+        </div>
+        <div class="item-allergens">Sin alérgenos</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">PECHUGA POLLO, queso, TOMATE Y LECHUGA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,50€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 11</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>CRUJIENTES 180º</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Nachos con boloñesa queso chedal pico de gallo</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Patatas de la huerta bravas</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 3,8,10,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Patatas alioli</span>
+          <span class="item-dots"></span>
+          <span class="item-price">2,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Solomillos de pollo kentucky</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,5</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Nuguets de pollo</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,5</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Patatas con bacon y chedar</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Patatas con kebab</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 11,13</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Durum con dos salsas</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,11,13</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Croquetas Cremosas Jamón</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00€</span>
+        </div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Pasta al horno</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">16 Lasaña de pollo</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,90€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>ENSALADAS</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Ensalada césar con solomillo de pollo y salsa césar mejorada</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,90€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,5,6,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Ensalada de kebab</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,90€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 11,13</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Ensalada de bacon, piñones, queso de cabra y vinagreta de frutos secos</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,90€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 3,10,11</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>pasta al horno</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Lasaña Boloñesa1o,00(</span>
+          <span class="item-dots"></span>
+          <span class="item-price">€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Carnes</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Flamenquin casero</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Lomo al queso casero</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>HAMBURGUESAS</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">NORMAL</span>
+          <span class="item-dots"></span>
+          <span class="item-price">4,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Lechuga y Cebolla.</div>
+        <div class="item-allergens">Alérgenos: 4</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">CON QUESO</span>
+          <span class="item-dots"></span>
+          <span class="item-price">5,00€</span>
+        </div>
+        <div class="item-desc">Tomate, Lechuga, Cebolla y cebolla.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">con queso y bacon</span>
+          <span class="item-dots"></span>
+          <span class="item-price">5,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Lechuga, bacon y Cebolla.</div>
+        <div class="item-allergens">Alérgenos: 4</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">ESPECIAL</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-desc">Tomate, Lechuga, Cebolla, Queso, Bacon y Huevo.</div>
+        <div class="item-allergens">Alérgenos: 4,5,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">suprema</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Lechuga, Cebolla, queso, medallón de pollo empanado bechamel</div>
+        <div class="item-allergens">Alérgenos: 4</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">DE BUEY</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,90€</span>
+        </div>
+        <div class="item-desc">Hamburguesa de Buey de los Vallle de Esla, Tomate, Lechuga, y Cebolla Caramelizada.</div>
+        <div class="item-allergens">Alérgenos: 4</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">smash traviola</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,90€</span>
+        </div>
+        <div class="item-desc">Doble pattys de carne de ternera madurada, mermelada de bacon, queso Edem, salsa Emmy, lechuga, tomate y cebolla crujiente en pan brioche</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">smash traviola 2.0</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,90€</span>
+        </div>
+        <div class="item-desc">Pulled pork, un patty de carne, salsa bbq, queso cheddar, pepinillos, cebolla encurtida y bacon crujiente con salsa de mahonesa trufada</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Pulled pork</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,90€</span>
+        </div>
+        <div class="item-desc">Pan brioche, pulled pork, salsa bbq, queso cheddar, pepinillos, cebolla caramelizada</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">NORMAL ¡sin gluten!</span>
+          <span class="item-dots"></span>
+          <span class="item-price">5,00€</span>
+        </div>
+        <div class="item-desc">Tomate, Lechuga y Cebolla.</div>
+        <div class="item-allergens">Sin alérgenos</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">CON QUESO ¡sin gluten!</span>
+          <span class="item-dots"></span>
+          <span class="item-price">5,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Lechuga, Cebolla y Queso.</div>
+        <div class="item-allergens">Alérgenos: 11</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>sandwich</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">MIXTO</span>
+          <span class="item-dots"></span>
+          <span class="item-price">3,00€</span>
+        </div>
+        <div class="item-desc">Tomate, Lechuga, York y Queso.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">AMERICANO</span>
+          <span class="item-dots"></span>
+          <span class="item-price">3,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Lechuga, York, Queso y Tortilla Francesa.</div>
+        <div class="item-allergens">Alérgenos: 4,5,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">vegetal</span>
+          <span class="item-dots"></span>
+          <span class="item-price">3,50€</span>
+        </div>
+        <div class="item-desc">Tomate, Lechuga, York, Atún y Espárragos.</div>
+        <div class="item-allergens">Alérgenos: 4,6</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">ATÚN CON PIMIENTOS ROJOS</span>
+          <span class="item-dots"></span>
+          <span class="item-price">3,50€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,6</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>perritos con y sin gluten</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">perrito normal</span>
+          <span class="item-dots"></span>
+          <span class="item-price">3,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">perrito con queso</span>
+          <span class="item-dots"></span>
+          <span class="item-price">3,50€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">perrito con pimientos</span>
+          <span class="item-dots"></span>
+          <span class="item-price">3,50€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">hotdog premium</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">perrito normal ¡sin gluten!</span>
+          <span class="item-dots"></span>
+          <span class="item-price">3,50€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">perrito con queso ¡sin gluten!</span>
+          <span class="item-dots"></span>
+          <span class="item-price">4,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 11</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Pedidos957 69 24 78</h2>
+    </section>
+  
+    </div>
+  </div>
+
+  
+</div>
+</body>
+</html>
