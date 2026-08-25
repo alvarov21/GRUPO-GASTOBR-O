@@ -186,69 +186,66 @@
   @media (max-width: 900px) {
     .portal-container {
       flex-direction: column;
-    }
-    .panel-content {
-      bottom: 30px;
-      left: 20px;
-      right: 20px;
-      transform: none;
-      opacity: 1;
-    }
-    .panel::after {
-      background: linear-gradient(to top, rgba(28,22,19,0.9) 0%, rgba(28,22,19,0.1) 100%);
-    }
-    .panel-bg {
-      filter: brightness(0.45) grayscale(0.2);
-    }
-    .global-title {
-      top: 40px;
-    }
-    .brand-logo {
-      bottom: 20px;
-    }
-    .panel:hover { flex: 1; }
-    .portal-container:hover .panel:not(:hover) { flex: 1; }
-  }
-
-  @media (max-width: 900px) {
-    .portal-container {
-      height: auto;
-      min-height: 100vh;
+      height: 100dvh; /* use dynamic viewport height for mobile browsers */
     }
     .panel {
-      min-height: 30vh;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      flex: 1;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
     .panel:last-child {
       border-bottom: none;
-      min-height: 40vh; /* space for the footer link */
+    }
+    .panel-content {
+      bottom: 20px;
+      left: 15px;
+      right: 15px;
+      transform: none; /* always visible */
+      opacity: 1;
+    }
+    .panel-title {
+      font-size: 1.6rem;
+      margin-bottom: 4px;
+    }
+    .panel-desc {
+      font-size: 0.85rem;
+    }
+    .panel::after {
+      background: linear-gradient(to top, rgba(28,22,19,0.95) 0%, rgba(28,22,19,0.4) 60%, rgba(28,22,19,0.7) 100%);
+    }
+    .panel-bg {
+      filter: brightness(0.6) grayscale(0.2);
+    }
+    .panel:hover .panel-bg {
+      filter: brightness(0.9) grayscale(0);
+      transform: scale(1.05);
     }
     .global-title {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: none;
-      padding: 30px 20px;
-      text-align: center;
-      background: var(--ink);
-      z-index: 10;
+      top: 25px;
+      width: 90%;
     }
     .global-title h1 {
-      font-size: 2.2rem;
+      font-size: 1.8rem;
     }
     .global-title p {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
     }
     .brand-logo {
-      position: relative;
-      bottom: 0;
-      left: 0;
-      transform: none;
-      padding: 20px;
-      text-align: center;
-      display: block;
-      background: var(--ink);
-      border-top: 1px solid rgba(255,255,255,0.1);
+      bottom: 15px;
+      font-size: 0.85rem;
+      z-index: 20;
+    }
+    .panel:hover { flex: 1.3; }
+    .portal-container:hover .panel:not(:hover) { flex: 0.9; }
+    
+    footer { 
+      position: absolute; 
+      bottom: 2px; 
+      left: 0; 
+      width: 100%; 
+      padding: 0; 
+      font-size: 0.6rem; 
+      z-index: 20;
+      opacity: 0.4;
     }
   }
 </style>
