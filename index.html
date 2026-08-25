@@ -209,6 +209,48 @@
     .panel:hover { flex: 1; }
     .portal-container:hover .panel:not(:hover) { flex: 1; }
   }
+
+  @media (max-width: 900px) {
+    .portal-container {
+      height: auto;
+      min-height: 100vh;
+    }
+    .panel {
+      min-height: 30vh;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .panel:last-child {
+      border-bottom: none;
+      min-height: 40vh; /* space for the footer link */
+    }
+    .global-title {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      padding: 30px 20px;
+      text-align: center;
+      background: var(--ink);
+      z-index: 10;
+    }
+    .global-title h1 {
+      font-size: 2.2rem;
+    }
+    .global-title p {
+      font-size: 0.75rem;
+    }
+    .brand-logo {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      transform: none;
+      padding: 20px;
+      text-align: center;
+      display: block;
+      background: var(--ink);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  }
 </style>
 </head>
 <body>

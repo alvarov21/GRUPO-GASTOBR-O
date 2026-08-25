@@ -67,6 +67,22 @@
   .item-price { font-weight: 700; font-family: 'Bricolage Grotesque'; font-size: 1.2rem; color: var(--accent); }
   .item-desc { font-family: 'Fraunces', serif; font-style: italic; font-size: 0.95rem; color: rgba(28,22,19,0.8); }
   .item-allergens { font-size: 0.75rem; color: var(--olive); font-weight: 600; margin-top: 2px; display: inline-block; padding: 2px 8px; background: var(--cream-2); border-radius: 4px; align-self: flex-start; }
+
+  @media (max-width: 600px) {
+    .carta-container { padding: 25px 15px; margin-bottom: 40px; border-radius: 8px; }
+    .category { margin-top: 30px; margin-bottom: 50px; }
+    .category h2 { font-size: 1.4rem; margin-bottom: 15px; }
+    .item-name { font-size: 1rem; }
+    .item-price { font-size: 1.05rem; }
+    .item-dots { display: none; }
+    .item-header { justify-content: space-between; gap: 10px; }
+    .gallery { gap: 10px; margin-bottom: 40px; }
+    .gallery img { height: 180px; border-radius: 6px; }
+    .info-card { padding: 25px 20px; }
+    h1 { font-size: clamp(2.5rem, 8vw, 4rem); }
+    .reviews { padding: 25px 15px; margin-bottom: 40px; }
+    .rating-badge { font-size: 1rem; padding: 4px 12px; }
+  }
 </style>
 </head>
 <body>
