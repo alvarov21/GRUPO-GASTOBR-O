@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta Guisoteo | Grupo Gastrobrío en Baena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1613; --ember:#2d221b; --cream:#f6efe1; --cream-2:#efe1c8;
+    --paprika:#bf4a28; --olive:#8f7530; --olive-light:#c9ac5c;
+    --line: rgba(28,22,19,0.12); --accent: #bf4a28;
+    --wrap: 800px;
+  }
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif; font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:var(--wrap); margin:0 auto; padding:40px 24px; }
+  h1, h2, h3{ font-family:'Bricolage Grotesque',sans-serif; margin:0; line-height:1.1; }
+  a{ color:inherit; text-decoration:none; }
+  header{ text-align:center; margin-bottom:50px; }
+  .brand-back{ display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:0.85rem; color:var(--olive); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:20px; transition:color .2s; }
+  .brand-back:hover{ color:var(--paprika); }
+  header h1{ font-size:clamp(2.2rem, 5vw, 3.5rem); margin-bottom:12px; }
+  header p{ color:rgba(28,22,19,0.7); font-size:1.1rem; }
+  
+  .category{ margin-bottom:50px; }
+  .category h2{ font-size:1.8rem; margin-bottom:24px; padding-bottom:10px; border-bottom:2px solid var(--line); color:var(--ink); text-transform:uppercase; letter-spacing:0.02em; }
+  
+  .item{ display:flex; flex-direction:column; gap:4px; margin-bottom:24px; }
+  .item-header{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; }
+  .item-name{ font-weight:700; font-size:1.15rem; color:var(--ink); text-transform:uppercase; }
+  .item-dots{ flex-grow:1; border-bottom:1px dotted var(--line); position:relative; top:-6px; }
+  .item-price{ font-weight:700; font-family:'Bricolage Grotesque'; font-size:1.2rem; color:var(--accent); }
+  .item-desc{ font-family:'Fraunces', serif; font-style:italic; font-size:0.95rem; color:rgba(28,22,19,0.8); }
+  .item-allergens{ font-size:0.75rem; color:var(--olive); font-weight:600; margin-top:2px; display:inline-block; padding:2px 8px; background:var(--cream-2); border-radius:4px; align-self:flex-start; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="/" class="brand-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Volver al inicio
+    </a>
+    <h1>Carta Guisoteo</h1>
+    <p>Grupo Gastrobrío · Baena</p>
+  </header>
+  <main>
+    <section class="category">
+      <h2>Nuestros Quesos Zuhereños</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Tabla de quesos de Zuheros con orejones</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">/ 16,00Frutos secos y mermelada.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Jamón ibérico al corte 100Grs.</span>
+          <span class="item-dots"></span>
+          <span class="item-price">18,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Salchichón de Noalejo</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Nuestras ensaladas</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Ensalada de quesitos zuhereños gratinados</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">con frutos secos, crema de pera y vinagresa balsámica</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Ensalada de tomate pansiverde y burrata vinagreta de mango</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">pesto genovés y crujiente de jamón ibérico</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Tomate pansi con vinagreta suave, lágrimas de pesto</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,00€</span>
+        </div>
+        <div class="item-desc">lascas de queso de los Balanchares</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Ensaladilla Ucraniana de patatas, mayonesa de encurtidos</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00€</span>
+        </div>
+        <div class="item-desc">crujiente de clara de huevo, ibéricos del sur y salsa de yena curada en soja</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Salmorejo con crujiente de jamón, Brocheta de bolitas</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00€</span>
+        </div>
+        <div class="item-desc">de flamenquín y huevo cocido de codorniz</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Nuestros pescados</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Calamaritos a la brasa y chirimirri andaluz</span>
+          <span class="item-dots"></span>
+          <span class="item-price">15,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Bacalao Confitado</span>
+          <span class="item-dots"></span>
+          <span class="item-price">16,00€</span>
+        </div>
+        <div class="item-desc">Sobre base suave de mojo rojo y cremoso</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Pulpo a la brasa con Mayonesa de AOVE</span>
+          <span class="item-dots"></span>
+          <span class="item-price">19,00€</span>
+        </div>
+        <div class="item-desc">Con aguacate braseado y huevo de codorniz</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>atún rojo</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Milhojas de hojaldre con mazamorra, mixto de sardina</span>
+          <span class="item-dots"></span>
+          <span class="item-price">4,50€</span>
+        </div>
+        <div class="item-desc">ahumada y atún rojo con compota de pera</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Tataki de atún rojo, crema fría de almendras</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,00€</span>
+        </div>
+        <div class="item-desc">y pico de gallo con mango</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Tartar de atún rojo, espejo de salmorejo</span>
+          <span class="item-dots"></span>
+          <span class="item-price">17,00€</span>
+        </div>
+        <div class="item-desc">Aguacate y pan Carasatu</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Tosta crujiente de Maiz con atún rojo</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-desc">mayonesa de wasabi suave, mpuse de guacamole y piña asada</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Tacos de atún rojo marinado</span>
+          <span class="item-dots"></span>
+          <span class="item-price">4,50€</span>
+        </div>
+        <div class="item-desc">Melón osmotizado al PX y huevas de Tobiko</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Guiso-teos y verduras</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Guisoteo de habitas baby</span>
+          <span class="item-dots"></span>
+          <span class="item-price">16,00€</span>
+        </div>
+        <div class="item-desc">Jamón ibérico y gambas rojas</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Berenjenas braseadas con carbonara y torreznos</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">sobre mermelada de pimientos asados</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Alcachofa en flor, Parmentier, Gazpachuelo pansiverde</span>
+          <span class="item-dots"></span>
+          <span class="item-price">4,50€</span>
+        </div>
+        <div class="item-desc">Carpaccio de papada ibérica y hyevo de codorniz</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Torreznos de soria, base de Parmentier trufada</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,00€</span>
+        </div>
+        <div class="item-desc">setas salteadas y huevos fritos</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Llauna de arroz al horno de brasas de carbón de coco</span>
+          <span class="item-dots"></span>
+          <span class="item-price">S/S€</span>
+        </div>
+        <div class="item-desc">Sugerencia de choeff</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Para compartir</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Calamares extratiernos, Rayadura de lima</span>
+          <span class="item-dots"></span>
+          <span class="item-price">15,00€</span>
+        </div>
+        <div class="item-desc">Con mayonesa de ajo asado.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Flamenquín cordobés troceado</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">Con mayonesa de ajo asado.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Croquetas de jamón ibérico Joselito (Unidad)</span>
+          <span class="item-dots"></span>
+          <span class="item-price">3,00€</span>
+        </div>
+        <div class="item-desc">(Mejor croqueta del mundo) .</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Croquetas de Txuleta de vaca madurada</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Croquetas de bacon ahumado</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Patatas con salsa brava de Gochujan</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00€</span>
+        </div>
+        <div class="item-desc">y torrezno de Soria</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Carnes</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Centro de chuletón (Lo mejor) a las brasas de carbón de coco 300Grs</span>
+          <span class="item-dots"></span>
+          <span class="item-price">28,00€</span>
+        </div>
+        <div class="item-desc">Verduritas al wok y patatas panaderas</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Solomillo a las brasas de carbón de coco</span>
+          <span class="item-dots"></span>
+          <span class="item-price">15,00€</span>
+        </div>
+        <div class="item-desc">y patatas panaderas</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Presa ibérica con Parmentier trufada y salsa española</span>
+          <span class="item-dots"></span>
+          <span class="item-price">18,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Entrecot braseado con carbón de coco</span>
+          <span class="item-dots"></span>
+          <span class="item-price">24,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Chuletillas de cordero lechal</span>
+          <span class="item-dots"></span>
+          <span class="item-price">18,00€</span>
+        </div>
+        <div class="item-desc">Patatas panaderas y vegetales al grill</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Pierna de chivo lechal en sus jugos</span>
+          <span class="item-dots"></span>
+          <span class="item-price">26,00€</span>
+        </div>
+        <div class="item-desc">y vegetales al grill</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Churrasquito de pollo a la brasa de carbón de coco</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">con patatas y verduras al wok</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Platos del mundo</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Gambas Rojas, cremoso de choclo amarillo al curry</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,00€</span>
+        </div>
+        <div class="item-desc">con AOVE de albahaca</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Lo-Mein Noodles de ibéricos y vegetales</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Steak tartar de añora, tuétano braseado</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,00€</span>
+        </div>
+        <div class="item-desc">y huevos de codorniz</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Tataki de ternera, Praliné crujiente de Pistachos</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,00€</span>
+        </div>
+        <div class="item-desc">al caramelo y de soja</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Hamburguesa "La ibérica - nuestra roja"</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,00€</span>
+        </div>
+        <div class="item-desc">Más del 30% de jamón ibérico</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Postres</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Tarta de quesos suaves de los balanchares</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Crema catalana super top</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Lingote de torrija a las tres lEches</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-desc">Caramelizada y con helado de vainilla</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Flan sedoso con Toffee de caramelo salado</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Affogato al Baileys o Amaretto. Delicioso helado de</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-desc">vahinilla con café recien hecho, sirope de Chocogofre, crocanti de almendras</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

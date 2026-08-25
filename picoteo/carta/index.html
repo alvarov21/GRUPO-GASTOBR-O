@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta Picoteo | Grupo Gastrobrío en Baena</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1613; --ember:#2d221b; --cream:#f6efe1; --cream-2:#efe1c8;
+    --paprika:#bf4a28; --olive:#8f7530; --olive-light:#c9ac5c;
+    --line: rgba(28,22,19,0.12); --accent: #c9d94a;
+    --wrap: 800px;
+  }
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif; font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:var(--wrap); margin:0 auto; padding:40px 24px; }
+  h1, h2, h3{ font-family:'Bricolage Grotesque',sans-serif; margin:0; line-height:1.1; }
+  a{ color:inherit; text-decoration:none; }
+  header{ text-align:center; margin-bottom:50px; }
+  .brand-back{ display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:0.85rem; color:var(--olive); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:20px; transition:color .2s; }
+  .brand-back:hover{ color:var(--paprika); }
+  header h1{ font-size:clamp(2.2rem, 5vw, 3.5rem); margin-bottom:12px; }
+  header p{ color:rgba(28,22,19,0.7); font-size:1.1rem; }
+  
+  .category{ margin-bottom:50px; }
+  .category h2{ font-size:1.8rem; margin-bottom:24px; padding-bottom:10px; border-bottom:2px solid var(--line); color:var(--ink); text-transform:uppercase; letter-spacing:0.02em; }
+  
+  .item{ display:flex; flex-direction:column; gap:4px; margin-bottom:24px; }
+  .item-header{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; }
+  .item-name{ font-weight:700; font-size:1.15rem; color:var(--ink); text-transform:uppercase; }
+  .item-dots{ flex-grow:1; border-bottom:1px dotted var(--line); position:relative; top:-6px; }
+  .item-price{ font-weight:700; font-family:'Bricolage Grotesque'; font-size:1.2rem; color:var(--accent); }
+  .item-desc{ font-family:'Fraunces', serif; font-style:italic; font-size:0.95rem; color:rgba(28,22,19,0.8); }
+  .item-allergens{ font-size:0.75rem; color:var(--olive); font-weight:600; margin-top:2px; display:inline-block; padding:2px 8px; background:var(--cream-2); border-radius:4px; align-self:flex-start; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="/" class="brand-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Volver al inicio
+    </a>
+    <h1>Carta Picoteo</h1>
+    <p>Grupo Gastrobrío · Baena</p>
+  </header>
+  <main>
+    <section class="category">
+      <h2>PLATOS FRÍOS</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Boquerones en vinagre</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">Elaboración propia y congelados 48 horas</div>
+        <div class="item-allergens">Alérgenos: 6</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">ENSALADA DE QUESO DE CABRA ZUHEREÑO</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00€</span>
+        </div>
+        <div class="item-desc">Con pasas sultanas, frutos secos y nuestra vinagreta balsámica secreta.</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">cogollos rellenos de crema de queso y pizquitos de salchichón</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">Con vinagreta de miel y mostaza.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">ENSALADILLA ucraniana CON lomitos de atún</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00€</span>
+        </div>
+        <div class="item-desc">Nuestra especial.</div>
+        <div class="item-allergens">Alérgenos: 1,5,6,13</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Ibéricos y embutidos</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">SALCHICHÓN DE NOALEJO</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00€</span>
+        </div>
+        <div class="item-allergens">Sin alérgenos</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">CHORIZO DE NOALEJO</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00€</span>
+        </div>
+        <div class="item-allergens">Sin alérgenos</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">JAMÓN IBÉRICO + 100g</span>
+          <span class="item-dots"></span>
+          <span class="item-price">16,00€</span>
+        </div>
+        <div class="item-desc">Del mejor jamón</div>
+        <div class="item-allergens">Sin alérgenos</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Mixto jamón ibérico y queso</span>
+          <span class="item-dots"></span>
+          <span class="item-price">18,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">QUESO CURADO ¡DEL BUENO!</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,00€</span>
+        </div>
+        <div class="item-desc">Nunca defrauda.</div>
+        <div class="item-allergens">Alérgenos: 11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">surtido de ibéricos</span>
+          <span class="item-dots"></span>
+          <span class="item-price">22,00€</span>
+        </div>
+        <div class="item-allergens">Sin alérgenos</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">tartar de salchichón</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">Receta malagueña.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>platos de picoteo</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">CROQUETAS de txuleta de vaca madurada</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">CROQUETAS DE siempre</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">GYOZAS DE POLLO CON SALSA especiada</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">Hecha en sus propios jugos.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">GYOZAS DE carrillada</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">Hecha en sus propios jugos.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">CALAMARES patagónicos EXTRA TIERNOS</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,00€</span>
+        </div>
+        <div class="item-desc">Fritos a la andaluza.</div>
+        <div class="item-allergens">Alérgenos: 4,6</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Huevos con brío</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">PATATAS AL PELOTÓN CON VIRUTAS DE JAMÓN ibérico</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,90€</span>
+        </div>
+        <div class="item-desc">Diez años sin salir de la cartas.</div>
+        <div class="item-allergens">Alérgenos: 5</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">HABITAS BABY mata CON HUEVO y jamón ibérico</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,90€</span>
+        </div>
+        <div class="item-desc">Manjar decorado con bastoncitos de jamón ibérico.</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">patatas pochadas con dos huevos, gambas rojas</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,90€</span>
+        </div>
+        <div class="item-desc">y salsa del coral de sus cabezas</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">parmentier de patatas con setas, portabellos y huevo poché</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,90€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>tostones</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">JAMÓN, QUESO DE CABRA ZUHEREÑO Y CONFITURA DE TOMATE</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,90€</span>
+        </div>
+        <div class="item-desc">Impresionante.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">SALMÓN, TOMATE Y UN TOQUE DE QUESO AZUL</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,90€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 4,6,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">GAMBAS GRATINADAS CON ALIOLI</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,90€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 1,4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">LOMO DE ORZA GRATINADO CON CAMEmBER</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,90€</span>
+        </div>
+        <div class="item-desc">Lomo elaborado en nuestra cocina.</div>
+        <div class="item-allergens">Alérgenos: 4,11</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">BOQUERONES EN VINAGRE, ANCHOAS, TOMATE Y CREMA DE QUESO</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,90€</span>
+        </div>
+        <div class="item-desc">Matrimonio perfecto.</div>
+        <div class="item-allergens">Alérgenos: 4,6,11</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>PLATOS DE VERdura y vigilia</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">alcachofas con gazpacho pansiverde</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-desc">y velo de papada ibérica maldonado</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Alcachofas con salsa al fino baena</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Alcachofas en flor de foie de pato y salsa romescu (3 und)</span>
+          <span class="item-dots"></span>
+          <span class="item-price">15,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Puerro baja temperatura</span>
+          <span class="item-dots"></span>
+          <span class="item-price">15,00€</span>
+        </div>
+        <div class="item-desc">con salsa de marisco, almejas y gambas</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>NuestROs PESCADOs</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">rodaballo al horno, chutney de piña y cuscus negro</span>
+          <span class="item-dots"></span>
+          <span class="item-price">18,90€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">PULPO A LA BRASA CON CREMA TRUFADA DE PIMENTÓN</span>
+          <span class="item-dots"></span>
+          <span class="item-price">18,90€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">LOMO DE BACALAO gratinado con alioli de ajo y miel</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,90€</span>
+        </div>
+        <div class="item-desc">Con alioli de ajo asado y miel.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">SEPIA a la plancha con patatas panaderas</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,90€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: 6</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">CHIPIRONES patagónicos braseados</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,90€</span>
+        </div>
+        <div class="item-desc">y salseados con Beurre Blanc.</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Nuestas carnes</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Super Hamburguesa, Queso Chedar cebolla caramelizada con jack daniels</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,90€</span>
+        </div>
+        <div class="item-desc">y nuestra salsa secreta.</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">FLAMENQUÍN cordobés ibérico xl</span>
+          <span class="item-dots"></span>
+          <span class="item-price">11,90€</span>
+        </div>
+        <div class="item-desc">El típico cordobés.</div>
+        <div class="item-allergens">Alérgenos: 4,5</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">medallones de solomillo MARINADO</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,90€</span>
+        </div>
+        <div class="item-desc">Déjate sorprender con nuestro adobo secreto.</div>
+        <div class="item-allergens">Alérgenos: 13</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">COSTILLAR ASADO (500 GRS.) CON SALSA BBQ</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,90€</span>
+        </div>
+        <div class="item-desc">Elaborado con salsa BBQ de sus propios jugos.</div>
+        <div class="item-allergens">Alérgenos: 8,13</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">PRESA IBÉRICA DE BELLOTA, PATATAS Y HUEVOS ROTOS</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,90€</span>
+        </div>
+        <div class="item-desc">Asada al punto, o como más te guste.</div>
+        <div class="item-allergens">Alérgenos: 5</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">CARRILLADA DE CERDO ESTOFADA Y CREMOSO DE PATATA</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,90€</span>
+        </div>
+        <div class="item-desc">Cremosidad en estado puro.</div>
+        <div class="item-allergens">Alérgenos: 9</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">CODILLO ASADO ASADO con PARMENTIER trufada</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,90€</span>
+        </div>
+        <div class="item-desc">Hasta que la carne queda extratierna.</div>
+        <div class="item-allergens">Alérgenos: 8</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">1/2 CODILLO ASADO con PARMENTIER trufada</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,90€</span>
+        </div>
+        <div class="item-desc">Hasta que la carne queda extratierna.</div>
+        <div class="item-allergens">Alérgenos: 8</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">pluma extratierna cocinada a baja temperatura</span>
+          <span class="item-dots"></span>
+          <span class="item-price">14,90€</span>
+        </div>
+        <div class="item-desc">Con salsa Tex Mex</div>
+        <div class="item-allergens">Alérgenos: Consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Nuestros postres</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Tarta de queso top</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-desc">Con un empanado perfecto.</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">tiramisú</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-desc">El típico cordobés.</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">milhojas extracrujientes</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-desc">De crema de boniato</div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Leche merengada</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,00€</span>
+        </div>
+        <div class="item-allergens">Alérgenos: consultar</div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Reservas y pedidos957 94 54 65</h2>
+    </section>
+  </main>
+</div>
+</body>
+</html>
