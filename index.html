@@ -16,7 +16,7 @@
   *, *::before, *::after { box-sizing: border-box; }
   body {
     margin: 0;
-    padding: 0;
+    display: none !important;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -207,7 +207,7 @@
       margin-bottom: 4px;
     }
     .panel-desc {
-      font-size: 0.85rem;
+      font-size: 0.75rem; padding: 10px; opacity: 0.7;
     }
     .panel::after {
       background: linear-gradient(to top, rgba(28,22,19,0.95) 0%, rgba(28,22,19,0.4) 60%, rgba(28,22,19,0.7) 100%);
@@ -224,14 +224,14 @@
       width: 90%;
     }
     .global-title h1 {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
     }
     .global-title p {
-      font-size: 0.7rem;
+      font-size: 0.55rem; opacity: 0.6;
     }
     .brand-logo {
       bottom: 15px;
-      font-size: 0.85rem;
+      font-size: 0.75rem; padding: 10px; opacity: 0.7;
       z-index: 20;
     }
     .panel:hover { flex: 1.3; }
@@ -242,7 +242,7 @@
       bottom: 2px; 
       left: 0; 
       width: 100%; 
-      padding: 0; 
+      display: none !important; 
       font-size: 0.6rem; 
       z-index: 20;
       opacity: 0.4;
