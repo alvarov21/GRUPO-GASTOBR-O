@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurante en Baena | Grupo Gastrobrío — Picoteo, Traviola, Guisoteo y Gelateo</title>
+<title>Sobre Nosotros | Grupo Gastrobrío</title>
 <meta name="description" content="Cuatro locales, un mismo grupo en Baena: Picoteo para tapear, Nova Traviola para pizza y burgers, Guisoteo para una cena especial y Gelateo para el helado de después.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -359,406 +359,196 @@
     @keyframes fadeUp{ to{ opacity:1; transform:none; } }
   }
 </style>
+
+<style>
+  .sn-hero { padding: 120px 20px 60px; max-width: 800px; margin: 0 auto; text-align: center; }
+  .sn-text { font-size: 1.15rem; line-height: 1.6; color: rgba(28,22,19,0.85); margin-bottom: 20px; }
+  .sn-story { max-width: 800px; margin: 0 auto 80px; padding: 0 20px; }
+  
+  .stats-section { background: var(--ink); color: var(--cream); padding: 80px 20px; text-align: center; margin-bottom: 80px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: var(--wrap); margin: 40px auto 0; }
+  @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .stat-num { font-size: clamp(3rem, 6vw, 4.5rem); font-family: 'Bricolage Grotesque'; font-weight: 800; color: var(--paprika); margin-bottom: 10px; }
+  .stat-label { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(246,239,225,0.8); }
+  
+  .team-section { max-width: var(--wrap); margin: 0 auto 80px; padding: 0 20px; }
+  .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 40px; }
+  @media (max-width: 1024px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; } }
+  
+  .team-card { background: #fff; border-top: 4px solid var(--accent, var(--olive)); border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s; }
+  .team-card:hover { transform: translateY(-5px); }
+  .team-img { width: 100%; aspect-ratio: 269/320; object-fit: cover; }
+  .team-info { padding: 20px; }
+  .team-name { font-family: 'Bricolage Grotesque'; font-weight: 700; font-size: 1.2rem; margin: 0 0 5px 0; color: var(--ink); }
+  .team-role { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--olive); font-weight: 600; margin: 0; }
+  
+  .sn-cierre { text-align: center; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.8rem; color: var(--olive); margin: 80px 20px; }
+</style>
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
-<header>
-  <div class="wrap nav-row">
-    <a href="#top" class="brand">
-      <span class="brand-mark">GB</span>
-      <span class="brand-name">Grupo Gastrobrío<span>Restaurantes en Baena</span></span>
-    </a>
-    <nav class="nav-links">
-      <a href="#elige">Elige tu local</a>
-      <a href="/sobre-nosotros/index.html">Sobre nosotros</a>
-      <a href="#reservas">Reservas</a>
-      <a href="#carta">Carta</a>
-      <a href="#domicilio">A domicilio</a>
-      <a href="#opiniones">Opiniones</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <div class="nav-cta">
-      <a class="nav-phone" href="tel:+34957945465"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>957 94 54 65</span></a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
-  </div>
-  <div class="mobile-panel" id="mobilePanel">
-    <a href="#elige">Elige tu local</a>
-    <a href="/sobre-nosotros/index.html">Sobre nosotros</a>
-      <a href="/sobre-nosotros/index.html">Sobre nosotros</a>
-    <a href="#reservas">Reservas</a>
-    <a href="#carta">Carta</a>
-    <a href="#domicilio">A domicilio</a>
-    <a href="#porque">Por qué elegirnos</a>
-    <a href="#opiniones">Opiniones</a>
-    <a href="#ubicacion">Ubicación</a>
-    <a href="#faq">FAQ</a>
-    <a href="tel:+34957945465" class="btn btn-primary">Llamar a Picoteo</a>
-  </div>
-</header>
+<main style="padding-top: 80px; background: var(--cream);">
+  
+  <!-- Bloque 1: Quiénes somos -->
+  <section class="sn-hero">
+    <div class="eyebrow section-tag">¿Quiénes somos?</div>
+    <h1 style="font-family: 'Fraunces', serif; font-style: italic; font-size: 2.5rem; margin-bottom: 30px; color: var(--ink);">Cocina vanguardista de primer nivel en Baena</h1>
+    <p class="sn-text">Si has llegado hasta aquí es porque aprecias la cocina novedosa y disruptiva, la cocina que sorprende, la cocina del detalle — la cocina que, a su vez, no pierde el toque tradicional. En Picoteo buscamos la innovación constante, y eso se demuestra en el sabor y la presentación de nuestros platos.</p>
+    <a href="/picoteo/index.html#carta" class="btn btn-primary" style="margin-top: 20px;">Echa un ojo a nuestras delicias</a>
+  </section>
+  
+  <!-- Bloque 2: Historia -->
+  <!-- ⚠️ NOTA INTERNA: Biografía enfocada en Picoteo. Opción A solicitada. Pendiente de confirmar si se adapta a grupo. -->
+  <section class="sn-story">
+    <p class="sn-text">Picoteo nace en 2010 como taberna: un lugar donde convergen la jovialidad, la informalidad y la distensión con la pulcritud, el esmero y el servicio de los grandes restaurantes. Una miscelánea de la que surgen jugosos platos que buscan satisfacer a los paladares más exquisitos, con recetas típicas de diferentes latitudes.</p>
+    
+    <p class="sn-text">La cabeza en la que se revuelven los ingredientes es la de su dueño, <strong>Teo Espartero</strong>. Un apasionado de la cocina que comienza su andadura en la hostelería con solo 14 años, trabajando de "nene" en el Bar El Vasco de Albendín, su pueblo natal — donde, sin duda, su jefe "El Vasco" le inyectó en las venas la devoción por este oficio.</p>
+    
+    <p class="sn-text">A día de hoy se ha rodeado de un gran equipo humano, tanto en cocina como en sala, para satisfacer a una clientela que, en un porcentaje muy elevado, es clientela asidua. Es uno de nuestros grandes secretos: el tándem que forman nuestros clientes y nuestro equipo. Los productos de temporada y de proximidad ocupan un gran lugar en nuestra despensa — por eso, cuando llega el verano, la huerta de Albendín tiene un gran protagonismo en nuestra carta.</p>
+  </section>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="top">
-  <div class="hero-bg">
-    <img src="https://picoteobaena.com/wp-content/uploads/2022/03/local-picoteo1280x853-2.jpg" alt="Interior de Picoteo, Grupo Gastrobrío en Baena">
-  </div>
-  <div class="wrap hero-inner">
-    <div class="eyebrow section-tag-dark hero-kicker fade-up">Baena · Córdoba</div>
-    <h1 class="fade-up d1">Restaurante en Baena: <em>Grupo Gastrobrío</em></h1>
-    <p class="hero-sub fade-up d2">Picoteo, Nova Traviola, Guisoteo y Gelateo — cuatro locales, un mismo compromiso con el producto de temporada y el trato cercano. Elige tu plan y en 30 segundos tienes mesa.</p>
-    <div class="hero-ctas fade-up d3">
-      <a href="#elige" class="btn btn-primary">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-        Elegir mi restaurante
-      </a>
-      <a href="tel:+34957945465" class="btn btn-ghost">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Llamar ahora
-      </a>
-    </div>
-    <div class="hero-stats fade-up d3">
-      <div class="hero-stat"><b>Desde 2010</b><span>Trayectoria en Baena</span></div>
-      <div class="hero-stat"><b>4 locales</b><span>Un mismo grupo</span></div>
-      <div class="hero-stat"><b>5,0★</b><span>Valoración en Google</span></div>
-    </div>
-  </div>
-</section>
+  <!-- Bloque 3: Por qué elegirnos -->
+  <section class="sn-story" style="text-align: center; border-top: 1px solid var(--line); padding-top: 60px;">
+    <h2 style="font-family: 'Bricolage Grotesque'; font-size: 2rem; margin-bottom: 20px;">¿Por qué elegirnos?</h2>
+    <p class="sn-text" style="font-size: 1.25rem;">Sencillamente, porque apostamos por las personas, por el buen trato al cliente, por la calidad gastronómica, por el I+D+i en la cocina, por la generación de riqueza en nuestra comarca. ¿Te parecen pocos argumentos?</p>
+  </section>
 
-<!-- ================= SELECTOR DE LOCAL ================= -->
-<section class="selector" id="elige">
-  <div class="wrap">
-    <div class="selector-head">
-      <div class="eyebrow section-tag-dark">¿Dónde te apetece hoy?</div>
-      <h2>Elige tu plan y te decimos qué restaurante en Baena te encaja</h2>
-      <p>Pasa el cursor (o toca en móvil) sobre cada nombre para ver el local.</p>
+  <!-- Bloque 4: Picoteo en cifras -->
+  <!-- ⚠️ NOTA INTERNA: Cifras de la web anterior. Confirmar si siguen siendo actuales. -->
+  <section class="stats-section">
+    <div class="eyebrow section-tag-dark" style="margin: 0 auto 20px;">Nuestros números</div>
+    <h2 style="font-family: 'Fraunces', serif; font-style: italic; font-size: 2.5rem; margin-bottom: 20px;">Picoteo en cifras</h2>
+    
+    <div class="stats-grid" id="stats">
+      <div>
+        <div class="stat-num" data-target="18959">0</div>
+        <div class="stat-label">Clientes satisfechos</div>
+      </div>
+      <div>
+        <div class="stat-num" data-target="130">0</div>
+        <div class="stat-label">Platos sorprendentes</div>
+      </div>
+      <div>
+        <div class="stat-num" data-target="33">0</div>
+        <div class="stat-label">Empleados felices</div>
+      </div>
     </div>
+  </section>
 
-    <div class="selector-grid">
-      <ul class="venue-list" id="venueList">
-        <li>
-          <button class="venue-row active" data-venue="picoteo" style="--accent:#c9d94a" aria-current="true">
-            <svg class="venue-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            <span>
-              <span class="venue-name">Picoteo</span>
-              <span class="venue-tag">Tapeo informal y cañas</span>
-            </span>
-          </button>
-        </li>
-        <li>
-          <button class="venue-row" data-venue="traviola" style="--accent:#d99a3f">
-            <svg class="venue-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            <span>
-              <span class="venue-name">Nova Traviola</span>
-              <span class="venue-tag">Pizza y hamburguesas a domicilio</span>
-            </span>
-          </button>
-        </li>
-        <li>
-          <button class="venue-row" data-venue="guisoteo" style="--accent:#bf4a28">
-            <svg class="venue-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            <span>
-              <span class="venue-name">Guisoteo</span>
-              <span class="venue-tag">Cena especial o de grupo</span>
-            </span>
-          </button>
-        </li>
-        <li>
-          <button class="venue-row" data-venue="gelateo" style="--accent:#e8b4c8">
-            <svg class="venue-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            <span>
-              <span class="venue-name">Gelateo</span>
-              <span class="venue-tag">Postre y helado artesanal</span>
-            </span>
-          </button>
-        </li>
-      </ul>
-
-      <div class="venue-preview">
-        <img class="active" data-img="picoteo" src="https://picoteobaena.com/wp-content/uploads/2022/03/local-picoteo-sin-casino1280x853-2.jpg" alt="Local de Picoteo en Baena">
-        <img data-img="traviola" src="https://picoteobaena.com/wp-content/uploads/2022/03/local-traviola1280x853-2.jpg" alt="Local de Nova Traviola en Baena">
-        <img data-img="guisoteo" src="/assets/guisoteo.jpg" alt="Local de Guisoteo">
-        <div class="venue-preview-empty" data-empty="gelateo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 3 8h8c1-3 3-5 3-8a7 7 0 0 0-7-7z"/><path d="M9 17h6l-1 4h-4l-1-4z"/></svg>
-          <p>Gelateo aún no tiene fotografía propia — reportaje en camino.</p>
-        </div>
-        <div class="venue-preview-caption" id="previewCaption">
-          <span id="previewLabel">Picoteo</span>
-          <a href="#reservas" class="btn btn-sm btn-primary" id="previewCta">Ver reservas</a>
+  <!-- Bloque 5: Equipo -->
+  <!-- ⚠️ NOTA INTERNA: Faltan fotos reales de Jorge, Ana y María. Se usan genéricas. -->
+  <section class="team-section">
+    <div style="text-align: center;">
+      <div class="eyebrow section-tag" style="margin: 0 auto 20px;">Conócenos</div>
+      <h2 style="font-family: 'Fraunces', serif; font-style: italic; font-size: 2.5rem; margin-bottom: 40px; color: var(--ink);">Nuestro equipo</h2>
+    </div>
+    
+    <div class="team-grid">
+      <!-- Card 1 -->
+      <div class="team-card" style="--accent: var(--paprika)">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2024/02/Teo.webp" alt="Foto de Teo Espartero, Responsable del equipo">
+        <div class="team-info">
+          <h3 class="team-name">Teo Espartero</h3>
+          <p class="team-role">Responsable del equipo</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= RESERVAS ================= -->
-<section class="section" id="reservas">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Reservar mesa y horarios</div>
-      <h2>Reservar te lleva una llamada</h2>
-      <p>Sin plataformas externas, sin esperas: llamas y hablas directamente con el restaurante.</p>
-    </div>
-
-    <div class="cards-3">
-      <div class="resv-card" style="--accent:#c9d94a">
-        <h3>Picoteo</h3>
-        <a href="tel:+34957945465" class="btn btn-outline btn-sm">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          957 94 54 65
-        </a>
-        <ul class="hours">
-          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lunes a viernes: 08:30–00:00</li>
-          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Sábados: 13:00–00:00</li>
-          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Domingo: cerrado</li>
-        </ul>
-      </div>
-
-      <div class="resv-card" style="--accent:#d99a3f">
-        <h3>Nova Traviola</h3>
-        <a href="tel:+34957692478" class="btn btn-outline btn-sm">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          957 69 24 78
-        </a>
-        <ul class="hours">
-          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Martes a domingo: 20:00–00:00</li>
-          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lunes: cerrado</li>
-        </ul>
-      </div>
-
-      <div class="resv-card" style="--accent:#bf4a28">
-        <h3>Guisoteo</h3>
-        <span class="pending">Teléfono y horario pendientes de confirmar</span>
-        <p style="font-size:0.88rem;color:rgba(28,22,19,0.65)">Para grupos de más de 8 personas, recomendamos avisar con antelación — la carta de brasas se prepara al momento.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CARTA (COVERFLOW) ================= -->
-<section class="carta-section" id="carta">
-  <div class="wrap">
-    <div class="section-head section-tag-dark">
-      <div class="eyebrow section-tag-dark">Ver la carta de cada restaurante</div>
-      <h2 style="color:var(--cream)">Precios claros, alérgenos marcados, cero sorpresas</h2>
-      <p style="color:rgba(246,239,225,0.72)">Una muestra de las tres cartas. Decide antes de venir, no cuando ya estás sentado a la mesa.</p>
-    </div>
-
-    <div class="cf-stage" id="cfStage">
-      <button class="cf-arrow cf-prev" id="cfPrev" aria-label="Plato anterior">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 19l-7-7 7-7"/></svg>
-      </button>
-      <!-- cards injected by JS -->
-      <button class="cf-arrow cf-next" id="cfNext" aria-label="Plato siguiente">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
-      </button>
-    </div>
-    <div class="cf-dots" id="cfDots"></div>
-
-    <div class="carta-links">
-      <a href="/picoteo/index.html#carta" class="btn btn-ghost btn-sm">Carta Picoteo completa</a>
-      <a href="/traviola/index.html#carta" class="btn btn-ghost btn-sm">Carta Traviola completa</a>
-      <a href="/guisoteo/index.html#carta" class="btn btn-ghost btn-sm">Carta Guisoteo completa</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= DOMICILIO ================= -->
-<section class="section" id="domicilio">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Pedido a domicilio en Baena</div>
-      <h2>¿No te apetece salir? Te lo llevamos por 1€</h2>
-      <p>Picoteo y Nova Traviola reparten con personal propio — nada de apps de terceros ni comisiones ocultas.</p>
-    </div>
-
-    <div class="steps">
-      <div class="step"><div class="step-num">01</div><h3>Llama al restaurante</h3><p>Picoteo (957 94 54 65) o Traviola (957 69 24 78). Te atiende una persona, no un contestador.</p></div>
-      <div class="step"><div class="step-num">02</div><h3>Preparamos tu pedido</h3><p>Recién hecho, no de nevera. Te indican el tiempo estimado al llamar.</p></div>
-      <div class="step"><div class="step-num">03</div><h3>Te lo llevamos nosotros</h3><p>Reparto propio del restaurante, sin depender de plataformas externas.</p></div>
-      <div class="step"><div class="step-num">04</div><h3>Lo disfrutas en casa</h3><p>Recién salido de cocina, a un euro de gastos de envío.</p></div>
-    </div>
-
-    <div class="domicilio-foot">
-      <p>Horario de pedidos: <strong>Picoteo</strong> L-S 12:00–17:00 y 20:00–00:00 · <strong>Traviola</strong> Ma-D 20:00–00:00</p>
-      <span class="pending">Guisoteo y Gelateo solo sirven en local</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= POR QUÉ ELEGIRNOS ================= -->
-<section class="section why-section" id="porque">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Por qué elegir Grupo Gastrobrío</div>
-      <h2>Argumentos, no adjetivos</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <h3>Producto de temporada y de proximidad</h3>
-        <p>En verano, buena parte de lo que llega a la mesa de Picoteo sale de una huerta en Albendín, a pocos kilómetros de Baena. No es un eslogan: es de dónde viene la verdura de tu plato.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <h3>Más de 15 años de trayectoria en Baena</h3>
-        <p>Picoteo nació en 2010 de la mano de Teo Espartero, en hostelería desde los 14 años. El grupo ha crecido a cuatro locales sin perder el trato de negocio de pueblo.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <h3>Alérgenos marcados en cada plato</h3>
-        <p>En las tres cartas verás los alérgenos numerados junto al plato, no solo "consultar con el camarero". Traviola, además, tiene pizzas, burgers, bocadillos y perritos sin gluten.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= OPINIONES ================= -->
-<section class="section" id="opiniones">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Opiniones de nuestros clientes</div>
-      <h2>Lo que se repite en las reseñas</h2>
-    </div>
-
-    <div class="rating-badge">
-      <div class="stars">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4.3L6 21l1.6-7.8L2 9h7z"/></svg>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4.3L6 21l1.6-7.8L2 9h7z"/></svg>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4.3L6 21l1.6-7.8L2 9h7z"/></svg>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4.3L6 21l1.6-7.8L2 9h7z"/></svg>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.6 4.2L18 21l-6-4.3L6 21l1.6-7.8L2 9h7z"/></svg>
-      </div>
-      <div><b>5,0 sobre 5</b> <span>&nbsp;· valoración en Google (Picoteo y Gelateo)</span></div>
-    </div>
-
-    <div class="testi-grid">
-      <div class="testi-card">
-        <p>"Uno de los sitios donde mejor se come en Baena: carta amplia, presentación cuidada y una relación calidad-precio muy justa."</p>
-        <div class="testi-who"><div class="testi-avatar">S</div><div><b>Sake</b><span>Cliente de Picoteo</span></div></div>
-      </div>
-      <div class="testi-card">
-        <p>"Calidad y elaboración fuera de lo normal, muy buen precio y un trato al cliente cuidado de principio a fin."</p>
-        <div class="testi-who"><div class="testi-avatar">E</div><div><b>Eva Sierra</b><span>Cliente de Picoteo</span></div></div>
-      </div>
-      <div class="testi-card">
-        <p>"Cocina de lujo a un precio accesible para cualquier bolsillo — y el postre, de otro nivel."</p>
-        <div class="testi-who"><div class="testi-avatar">P</div><div><b>Paco Mendoza</b><span>Cliente de Picoteo</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= UBICACIÓN ================= -->
-<section class="section loc-section" id="ubicacion">
-  <div class="wrap">
-    <div class="section-head section-tag-dark">
-      <div class="eyebrow section-tag-dark">Dónde estamos y cómo llegar</div>
-      <h2 style="color:var(--cream)">En el centro de Baena</h2>
-    </div>
-    <div class="loc-grid">
-      <div class="loc-card">
-        <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div><h3>Picoteo</h3><p>Av. Padre Villoslada, 29, 14850 Baena, Córdoba</p></div>
-      </div>
-      <div class="loc-card">
-        <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div><h3>Nova Traviola</h3><p>Av. San Carlos de Chile, 79, 14850 Baena, Córdoba</p></div>
-      </div>
-      <div class="loc-card">
-        <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div><h3>Guisoteo</h3><p>Plaza de la Paz, 2, 14870 Zuheros, Córdoba</p></div>
-      </div>
-      <div class="loc-card">
-        <div class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div><h3>Gelateo</h3><p>C. Salvador Muñoz, 2, 14850 Baena, Córdoba</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FAQ ================= -->
-<section class="section" id="faq">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Preguntas frecuentes</div>
-      <h2>Todo lo que se pregunta antes de venir</h2>
-    </div>
-
-    <div class="faq-list">
-      <details class="faq-item" open>
-        <summary>¿Cuál es el mejor restaurante para comer en Baena?<span class="faq-plus"></span></summary>
-        <div class="faq-a">Depende de qué te apetezca. Picoteo para tapear sin protocolos, Nova Traviola si te apetece pizza o hamburguesa, Guisoteo para una cena de nivel, y Gelateo para el helado de después. Picoteo lleva abierto desde 2010 y mantiene una valoración alta y sostenida en Google.</div>
-      </details>
-      <details class="faq-item">
-        <summary>¿Qué restaurante en Baena tiene opciones sin gluten?<span class="faq-plus"></span></summary>
-        <div class="faq-a">Nova Traviola es el que más variedad tiene: pizzas, hamburguesas, bocadillos y perritos en versión sin gluten. En Picoteo y Guisoteo, cada plato indica sus alérgenos numerados.</div>
-      </details>
-      <details class="faq-item">
-        <summary>¿Dónde puedo cenar en Baena si voy con un grupo grande?<span class="faq-plus"></span></summary>
-        <div class="faq-a">Guisoteo: tiene platos para compartir como el centro de chuletón a la brasa o la tabla de quesos de Zuheros. Si sois más de 8, mejor llamar con antelación.</div>
-      </details>
-      <details class="faq-item">
-        <summary>¿Hay algún restaurante en Baena que haga pedidos a domicilio?<span class="faq-plus"></span></summary>
-        <div class="faq-a">Sí: Picoteo (957 94 54 65, L-S) y Nova Traviola (957 69 24 78, Ma-D). Reparto propio, 1€ de gastos de envío.</div>
-      </details>
-      <details class="faq-item">
-        <summary>¿Qué restaurante recomiendas para una cena especial o de cumpleaños?<span class="faq-plus"></span></summary>
-        <div class="faq-a">Guisoteo. Es la carta con el ticket medio más alto del grupo, con platos como el tataki de atún rojo o el pulpo a la brasa con mayonesa de AOVE.</div>
-      </details>
-      <details class="faq-item">
-        <summary>¿Cuánto se paga de media en un restaurante en Baena?<span class="faq-plus"></span></summary>
-        <div class="faq-a">En Picoteo, entre 6€ y 22€. En Traviola, las pizzas rondan 8,50€–10,50€. Guisoteo es el ticket más alto, con platos para compartir desde 28€.</div>
-      </details>
-      <details class="faq-item">
-        <summary>¿Se puede reservar mesa por teléfono?<span class="faq-plus"></span></summary>
-        <div class="faq-a">Sí, en Picoteo (957 94 54 65) y Nova Traviola (957 69 24 78), sin plataformas externas. Para Guisoteo, en breve tendremos línea directa también.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="brand">
-          <span class="brand-mark">GB</span>
-          <span class="brand-name" style="color:var(--cream)">Grupo Gastrobrío</span>
+      <!-- Card 2 -->
+      <div class="team-card">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2020/08/camarero1-269x320-2.jpg" alt="Foto de Jorge Jiménez, Sala">
+        <div class="team-info">
+          <h3 class="team-name">Jorge Jiménez</h3>
+          <p class="team-role">Sala</p>
         </div>
-        <p>Picoteo, Nova Traviola, Guisoteo y Gelateo — cuatro locales en Baena, un mismo compromiso con el buen producto.</p>
       </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h4>Restaurantes</h4>
-          <a href="#elige">Picoteo</a>
-          <a href="#elige">Nova Traviola</a>
-          <a href="#elige">Guisoteo</a>
-          <a href="#elige">Gelateo</a>
+      <!-- Card 3 -->
+      <div class="team-card">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2024/02/Pilar.webp" alt="Foto de Pilar Güero, Sala">
+        <div class="team-info">
+          <h3 class="team-name">Pilar Güero</h3>
+          <p class="team-role">Sala</p>
         </div>
-        <div class="footer-col">
-          <h4>Enlaces</h4>
-          <a href="#reservas">Reservas</a>
-          <a href="#carta">Carta</a>
-          <a href="#faq">Preguntas frecuentes</a>
+      </div>
+      <!-- Card 4 -->
+      <div class="team-card">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2020/08/cocina1-269x320-1.jpg" alt="Foto de Ana Cabezas, Cocina / Repostería">
+        <div class="team-info">
+          <h3 class="team-name">Ana Cabezas</h3>
+          <p class="team-role">Cocina / Repostería</p>
         </div>
-        <div class="footer-col">
-          <h4>Contacto</h4>
-          <a href="tel:+34957945465">Picoteo — 957 94 54 65</a>
-          <a href="tel:+34957692478">Traviola — 957 69 24 78</a>
+      </div>
+      <!-- Card 5 -->
+      <div class="team-card">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2024/02/Javier.webp" alt="Foto de Javier Navarro, Sala">
+        <div class="team-info">
+          <h3 class="team-name">Javier Navarro</h3>
+          <p class="team-role">Sala</p>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="team-card">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2024/02/Jeisson.webp" alt="Foto de Jeisson Vargas, Sala">
+        <div class="team-info">
+          <h3 class="team-name">Jeisson Vargas</h3>
+          <p class="team-role">Sala</p>
+        </div>
+      </div>
+      <!-- Card 7 -->
+      <div class="team-card">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2020/08/cocina2-269x320-1.jpg" alt="Foto de María Jiménez, Cocina">
+        <div class="team-info">
+          <h3 class="team-name">María Jiménez</h3>
+          <p class="team-role">Cocina</p>
+        </div>
+      </div>
+      <!-- Card 8 -->
+      <div class="team-card">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2024/02/Vladimir.webp" alt="Foto de Vladimir Alfaro, Cocina">
+        <div class="team-info">
+          <h3 class="team-name">Vladimir Alfaro</h3>
+          <p class="team-role">Cocina</p>
+        </div>
+      </div>
+      <!-- Card 9 -->
+      <div class="team-card">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2020/08/Lucia-269x320-1.jpg" alt="Foto de Lucía Rodríguez, Cocina">
+        <div class="team-info">
+          <h3 class="team-name">Lucía Rodríguez</h3>
+          <p class="team-role">Cocina</p>
+        </div>
+      </div>
+      <!-- Card 10 -->
+      <div class="team-card">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2020/10/Antonio-Web269x320.jpg" alt="Foto de Antonio Álvarez, Cocina">
+        <div class="team-info">
+          <h3 class="team-name">Antonio Álvarez</h3>
+          <p class="team-role">Cocina</p>
+        </div>
+      </div>
+      <!-- Card 11 -->
+      <div class="team-card">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2020/10/JaimeWeb269x320.jpg" alt="Foto de Jaime, Sala">
+        <div class="team-info">
+          <h3 class="team-name">Jaime</h3>
+          <p class="team-role">Sala</p>
+        </div>
+      </div>
+      <!-- Card 12 -->
+      <div class="team-card">
+        <img class="team-img" src="https://picoteobaena.com/wp-content/uploads/2024/02/Valentina.webp" alt="Foto de Valentina, Cocina">
+        <div class="team-info">
+          <h3 class="team-name">Valentina</h3>
+          <p class="team-role">Cocina</p>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Grupo Gastrobrío. Todos los derechos reservados.</span>
-      <div style="display: flex; gap: 20px; flex-wrap: wrap;"><span>Baena, Córdoba</span><span>Web desarrollada por <a href="https://potenciatunegocio.eu" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">potenciatunegocio.eu</a></span></div>
-    </div>
-  </div>
-</footer>
+  </section>
 
+  <div class="sn-cierre">
+    Orgullosos de cocinar para ti. Orgullosos de Gastrobrío.
+  </div>
+  
+</main>
 <script>
   // ---- Mobile nav ----
   const hbBtn = document.getElementById('hamburgerBtn');
@@ -892,6 +682,46 @@
     stage.addEventListener('mouseleave', () => { auto = setInterval(() => goTo(current+1), 5500); });
   }
 </script>
+<script>
+  // Counter animation logic
+  document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const counters = document.querySelectorAll('.stat-num');
+    
+    if (prefersReducedMotion) {
+      counters.forEach(c => {
+        const target = +c.getAttribute('data-target');
+        c.innerText = target.toLocaleString('es-ES');
+      });
+      return;
+    }
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = +entry.target.getAttribute('data-target');
+          const duration = 2000;
+          const stepTime = Math.abs(Math.floor(duration / 60)); // roughly 60fps
+          let current = 0;
+          const increment = target / (duration / stepTime);
+          
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              entry.target.innerText = target.toLocaleString('es-ES');
+              clearInterval(timer);
+            } else {
+              entry.target.innerText = Math.floor(current).toLocaleString('es-ES');
+            }
+          }, stepTime);
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(c => observer.observe(c));
+  });
+</script>
 </body>
-
 </html>
